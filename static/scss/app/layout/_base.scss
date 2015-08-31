@@ -1,0 +1,19 @@
+@import 'grid';
+@import 'header';
+@import 'footer';
+
+@import 'section/base';
+
+h1, h2, h3,
+h4, h5, h6,
+nav {
+  // font-family: 'Shanti', sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+input[type="button"] {
+  line-height: 0;
+}

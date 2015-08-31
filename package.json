@@ -1,0 +1,60 @@
+{
+  "name": "sample",
+  "version": "0.0.1",
+  "description": "Sample project",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sample/sample.git"
+  },
+  "browser": {
+    "typedjs": "./static/js/vendor/typed.min.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "typedjs": { "depends": [ "jquery:$" ] }
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "partialify",
+      "coffeeify",
+      "jadeify",
+      "browserify-shim"
+    ]
+  },
+  "devDependencies": {
+    "babelify": "latest",
+    "browser-sync": "latest",
+    "browserify": "latest",
+    "browserify-shim": "^3.8.10",
+    "chance": "latest",
+    "coffeeify": "latest",
+    "font-awesome": "latest",
+    "gulp": "latest",
+    "gulp-changed": "latest",
+    "gulp-compass": "latest",
+    "gulp-concat": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jade": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-modernizr": "latest",
+    "gulp-notify": "latest",
+    "gulp-size": "latest",
+    "gulp-streamify": "latest",
+    "gulp-uglify": "latest",
+    "jade": "latest",
+    "jadeify": "latest",
+    "jquery": "^2.1.4",
+    "lodash": "latest",
+    "merge-stream": "latest",
+    "normalize.css": "latest",
+    "page": "latest",
+    "partialify": "latest",
+    "socket.io": "latest",
+    "superagent": "latest",
+    "vinyl-source-stream": "latest",
+    "vue": "latest",
+    "particles.js": "latest"
+  }
+}

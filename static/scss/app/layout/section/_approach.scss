@@ -1,0 +1,165 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after,
+);
+
+@include exports('approach') {
+  section h3 {
+    font-weight: 400;
+    // font-family: 'Ubuntu';
+    @include adjust-font-size-to(ms(6), 1.5);
+    margin: .5em 0;
+    color: lighten(#5A646F, 20%);
+  }
+
+  strong {
+    // @include adjust-font-size-to(ms(1.5), 1);
+    // color: #5A646F;
+    color: #000;
+  }
+
+  .presentation {
+    padding: 0 1em;
+    display: table;
+    width: 100%;
+
+    div.row {
+      display: table-row;
+    }
+
+    div.cell {
+      display: table-cell;
+      vertical-align: middle;
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      // @include adjust-font-size-to(ms(1));
+    }
+
+    .mockup {
+      text-align: center;
+    }
+  }
+
+  .line {
+    display: inline-block;
+    text-transform: uppercase;
+
+    div {
+      border-bottom: 2px solid #242424;
+      width: 75px;
+      margin-top: .25em;
+    }
+
+    .color {
+      color: #242424;
+    }
+  }
+
+  #approach {
+    font-family: 'Oxygen';
+
+    p {
+      color: darken(#5A646F, 10%);
+    }
+
+    & > p {
+      padding: 1em 1em;
+      text-align: center;
+      // @include adjust-font-size-to(ms(1));
+    }
+
+    ul {
+      // @include clearfix;
+      @include container;
+      display: flex;
+    }
+
+    .flex-boxes {
+      $base-border-radius: 3px !default;
+      $base-background-color: white !default;
+      $dark-gray: #333 !default;
+      $light-gray: #DDD !default;
+      $base-font-color: $dark-gray !default;
+      $flex-box-border-color: $light-gray;
+      $flex-box-border: 1px solid $flex-box-border-color;
+      $flex-box-background: lighten($light-gray, 10%);
+      $flex-box-gutter: 1em;
+      $flex-box-width: 18em;
+      $flex-box-color: transparentize($base-font-color, 0.3);
+      $flex-box-top-colors:
+      #6180C1,
+      #ED5353,
+      #E1822C;
+
+      @include clearfix;
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(stretch);
+      @include flex-wrap(wrap);
+      clear: both;
+      text-align: center;
+
+      .flex-box {
+        @include transition (all 0.2s ease-in-out);
+        @include flex(2 2 15em);
+        @include align-self(stretch);
+        display: block;
+        margin: $flex-box-gutter;
+        padding: 1em 1em 1em 1em;
+        text-decoration: none;
+      }
+    }
+
+    .darken {
+      margin: 0 -1em;
+      padding: 2em 1em 1em;
+      background-color: #f7f7f7;
+    }
+
+    h4 {
+      text-align: center;
+      margin: 0;
+      height: 2*$base-line-height;
+      @include clearfix;
+      border-bottom: 1px solid lighten(#5A646F, 50%);
+      margin-bottom: 1em;
+      @include adjust-font-size-to(ms(2), 1);
+
+      p {
+        color: lighten(#5A646F, 20%);
+      }
+
+      &:hover .name {
+        border-bottom: 1px solid rgba(#222, .5);
+      }
+
+      .icon {
+        font-size: ms(3);
+        margin: 0 .25em;
+        @include single-transition(font-size, .2s, ease-in-out);
+        float: right;
+      }
+      .name {
+        vertical-align: center;
+        @include single-transition(font-size, .2s, ease-in-out);
+        float: left;
+        line-height: 24px;
+      }
+    }
+
+    li p {
+      margin: 0;
+      // font-style: italic;
+    }
+  }
+}
