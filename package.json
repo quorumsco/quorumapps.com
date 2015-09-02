@@ -7,27 +7,18 @@
     "type": "git",
     "url": "git://github.com/sample/sample.git"
   },
-  "browser": {
-    "typedjs": "./static/js/vendor/typed.min.js"
-  },
-  "browserify-shim": {
-    "jquery": "$",
-    "typedjs": { "depends": [ "jquery:$" ] }
-  },
   "browserify": {
     "transform": [
       "babelify",
       "partialify",
       "coffeeify",
-      "jadeify",
-      "browserify-shim"
+      "jadeify"
     ]
   },
   "devDependencies": {
     "babelify": "latest",
     "browser-sync": "latest",
     "browserify": "latest",
-    "browserify-shim": "^3.8.10",
     "chance": "latest",
     "coffeeify": "latest",
     "font-awesome": "latest",
@@ -45,7 +36,7 @@
     "gulp-uglify": "latest",
     "jade": "latest",
     "jadeify": "latest",
-    "jquery": "^2.1.4",
+    "jquery": "latest",
     "lodash": "latest",
     "merge-stream": "latest",
     "normalize.css": "latest",
