@@ -5,7 +5,7 @@ ADD . /srv/http/corporate
 
 WORKDIR /srv/http/corporate
 
-RUN npm install && \
+RUN ln -s ../node_modules . && \
     gulp prod
 
 VOLUME ["/srv/http/corporate"]
