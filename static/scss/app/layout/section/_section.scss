@@ -1,3 +1,5 @@
+$header-font-size: 1;
+
 @include exports('section') {
   section {
     padding: 1em;
@@ -8,9 +10,10 @@
       text-align: center;
       text-transform: uppercase;
       font-weight: 500;
+      margin: 0 0 1em;
 
       span {
-        @include adjust-font-size-to(ms(2));
+        @include adjust-font-size-to(ms($header-font-size));
         color: lighten(#000, 60%);
         position: relative;
 
@@ -26,7 +29,7 @@
         width: 60px;
         border-bottom: 2px solid #222;
         left: 0;
-        bottom: -5px;
+        top: $header-font-size * $base-line-height - 3px;
       }
     }
   }
