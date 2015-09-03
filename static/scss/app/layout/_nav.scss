@@ -1,2 +1,54 @@
+$nav-height: 2;
+$nav-border-color: rgba(#000, .2);
+
 @include exports('nav') {
+  #nav {
+    @include position(fixed, 0 0 auto 0);
+    background-color: #fff;
+    z-index: 5;
+  }
+
+  .nav-brand {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1em;
+  }
+
+  .nav-toggle {
+    float: right;
+    margin: 0 1em;
+  }
+
+  // .main-links,
+  // .social-links,
+  // .main-links li,
+  // .social-links li {
+  //   display: inline-block;
+  //   vertical-align: top;
+  // }
+
+  .main-links li {
+    border-top: 1px solid $nav-border-color;
+    padding: 0 1em;
+  }
+
+  .social-links {
+    border-top: 1px solid $nav-border-color;
+    border-bottom: 1px solid $nav-border-color;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 1em;
+    }
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-brand a,
+  .nav-toggle a {
+    @include adjust-font-size-to(ms(0), $nav-height);
+  }
 }

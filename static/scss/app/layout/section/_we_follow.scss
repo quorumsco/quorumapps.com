@@ -1,2 +1,18 @@
 @include exports('we-follow') {
+  #we-follow {
+    li:not(:last-child) {
+      margin-bottom: 2em;
+    }
+
+    h4 {
+      text-align: center;
+      @include adjust-font-size-to(ms(1));
+      margin: 0;
+    }
+
+    .icon {
+      @include adjust-font-size-to(ms(10));
+      text-align: center;
+    }
+  }
 }

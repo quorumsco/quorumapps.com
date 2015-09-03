@@ -1,2 +1,20 @@
 @include exports('header') {
+  #home {
+    margin-top: $nav-height * $base-line-height;
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    padding: 1em;
+
+    li {
+      font-family: 'Raleway', sans-serif;
+      @include adjust-font-size-to(ms(2), 1.5);
+      font-weight: 800;
+      color: rgba(#fff, .7);
+
+      em {
+        color: #fff;
+        font-style: normal;
+      }
+    }
+  }
 }

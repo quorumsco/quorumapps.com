@@ -1,0 +1,33 @@
+@include exports('section') {
+  section {
+    padding: 1em;
+    background-color: #fff;
+
+    header h3 {
+      font-family: 'Ubuntu', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+
+      span {
+        @include adjust-font-size-to(ms(2));
+        color: lighten(#000, 60%);
+        position: relative;
+
+        em {
+          font-style: normal;
+          color: #222;
+        }
+      }
+
+      span:after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        border-bottom: 2px solid #222;
+        left: 0;
+        bottom: -5px;
+      }
+    }
+  }
+}
