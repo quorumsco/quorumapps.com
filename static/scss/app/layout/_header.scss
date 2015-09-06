@@ -17,4 +17,10 @@
       }
     }
   }
+
+  @include media($medium-screen-up) {
+    #home {
+        height: 100vh;
+    }
+  }
 }

@@ -24,4 +24,18 @@
         }
     }
   }
+
+  @include media($medium-screen-up) {
+    #we-follow .content {
+        @include container;
+    }
+
+    #we-follow .content li {
+        @include span(1 of 4);
+
+        &:last-child {
+            @include last;
+        }
+    }
+  }
 }

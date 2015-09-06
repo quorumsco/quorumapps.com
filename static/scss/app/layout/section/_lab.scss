@@ -56,4 +56,18 @@
             }
         }
     }
+
+  @include media($medium-screen-up) {
+    #lab .content {
+        @include container;
+    }
+
+    #lab .content li {
+        @include span(1 of 3);
+
+        &:last-child {
+            @include last;
+        }
+    }
+  }
 }

@@ -39,4 +39,18 @@
       }
     }
   }
+
+  @include media($medium-screen-up) {
+    #activities .content {
+        @include container;
+    }
+
+    #activities .content li {
+        @include span(1 of 3);
+
+        &:last-child {
+            @include last;
+        }
+    }
+  }
 }

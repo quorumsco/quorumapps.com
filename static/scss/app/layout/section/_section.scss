@@ -38,4 +38,10 @@ $header-line-height: 1.5;
       }
     }
   }
+
+    @include media($medium-screen-up) {
+        section > header p {
+            text-align: center;
+        }
+    }
 }

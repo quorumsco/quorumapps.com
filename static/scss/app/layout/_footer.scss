@@ -53,4 +53,22 @@
             }
         }
     }
+
+    @include media($medium-screen-up) {
+        #footer {
+            @include container;
+        }
+
+        #footer > div {
+            @include span(1 of 3);
+
+            &:last-child {
+                @include last;
+            }
+        }
+
+        #footer h3 {
+            text-align: left;
+        }
+    }
 }
