@@ -22,7 +22,7 @@
             }
         }
 
-        & > div:not(:last-child) {
+        & .container > div:not(:last-child) {
             margin-bottom: 2em;
         }
 
@@ -54,12 +54,12 @@
         }
     }
 
-    @include media($medium-screen-up) {
+    @include susy-media($medium-screen) {
         #footer {
             @include container;
         }
 
-        #footer > div {
+        #footer .container > div {
             @include span(1 of 3);
 
             &:last-child {
@@ -69,6 +69,10 @@
 
         #footer h3 {
             text-align: left;
+        }
+
+        #footer .container > div:not(:last-child) {
+            margin-bottom: 0;
         }
     }
 }

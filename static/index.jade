@@ -11,37 +11,38 @@ html
     link(rel='stylesheet' href='stylesheets/app.css')
   body
     nav#nav
-      h1.nav-brand
-        a(href='//quorumapps.com')
-          img(src='images/quorum-logo.png' alt='Quorum')
-      .nav-toggle
-        a(href='#')
-          i.fa.fa-fw.fa-bars
-      .nav-links
-        ul.main-links
-          li
-            a(href='#home') Accueil
-          li
-            a(href='#who-are-we') Activités
-          li
-            a(href='#lab') Lab
-          li
-            a(href='#team') Équipe
-          li
-            a(href='//blog.quorumapps.com') Blog
-        ul.social-links
-          li
-            a(href='//facebook.com/pages/Quorum/691793700953234')
-              i.icon-facebook
-          li
-            a(href='//twitter.com/quorumapps')
-              i.icon-twitter
-          li
-            a(href='//www.linkedin.com/company/10114882')
-              i.icon-linkedin
-          li
-            a(href='mailto:infos@quorumapps.com')
-              i.fa.fa-fw.fa-envelope-o
+      .container
+        h1.nav-brand
+          a(href='//quorumapps.com')
+            img(src='images/quorum-logo.png' alt='Quorum')
+        .nav-toggle
+          a(href='#')
+            i.fa.fa-fw.fa-bars
+        .nav-links
+          ul.main-links
+            li
+              a(href='#home') Accueil
+            li
+              a(href='#who-are-we') Activités
+            li
+              a(href='#lab') Lab
+            li
+              a(href='#team') Équipe
+            li
+              a(href='//blog.quorumapps.com') Blog
+          ul.social-links
+            li
+              a(href='//facebook.com/pages/Quorum/691793700953234')
+                i.icon-facebook
+            li
+              a(href='//twitter.com/quorumapps')
+                i.icon-twitter
+            li
+              a(href='//www.linkedin.com/company/10114882')
+                i.icon-linkedin
+            li
+              a(href='mailto:infos@quorumapps.com')
+                i.fa.fa-fw.fa-envelope-o
     header#home
       ul
         li #[em Optimiser] les politiques publiques
@@ -51,219 +52,226 @@ html
         li Avec #[em Quorum]
     main#main
       section#who-are-we
-        header
-          h3
-            span Qui #[em sommes-nous ?]
-          p Nous développons des #[strong solutions technologiques] pour aider nos partenaires à mener des actions #[strong innovantes], #[strong impactantes], et centrées sur les #[strong individus] ; des actions qui atteignent leurs objectifs et apportent du #[strong changement].
-        .content
-          .description
-            p La dernière décennie a consacré l’utilisation d’Internet et des réseaux sociaux comme une nouvelle façon d’interagir au sein de la #[strong société].
-            p Il s’agit aujourd’hui d’aller plus loin.
-            p Utiliser les nouvelles technologies, l'open data, le big data, pour permettre à sa #[strong cause], à sa #[strong campagne], à son #[strong action] ou sa #[strong décision] de s’adapter en temps réel au monde qui l’entoure.
-          .mockup
-            img(src='images/mockup.png' alt='Product mockup')
+        .container
+          header
+            h3
+              span Qui #[em sommes-nous ?]
+            p Nous développons des #[strong solutions technologiques] pour aider nos partenaires à mener des actions #[strong innovantes], #[strong impactantes], et centrées sur les #[strong individus] ; des actions qui atteignent leurs objectifs et apportent du #[strong changement].
+          .content
+            .description
+              p La dernière décennie a consacré l’utilisation d’Internet et des réseaux sociaux comme une nouvelle façon d’interagir au sein de la #[strong société].
+              p Il s’agit aujourd’hui d’aller plus loin.
+              p Utiliser les nouvelles technologies, l'open data, le big data, pour permettre à sa #[strong cause], à sa #[strong campagne], à son #[strong action] ou sa #[strong décision] de s’adapter en temps réel au monde qui l’entoure.
+            .mockup
+              img(src='images/mockup.png' alt='Product mockup')
       section#activities
-        header
-          h3
-            span Nos #[em activités]
-        ul.content
-          li
-            header
-              h4 Data &amp; Analytics
+        .container
+          header
+            h3
+              span Nos #[em activités]
+          ul.content
+            li
+              header
+                h4 Data &amp; Analytics
+                .icon
+                  i.icon-data
+              .description
+                p
+                  em Data collection et Data intelligence.
+                p Nous donnons du sens aux données en utilisant le pouvoir analytique et logistique des nouvelles technologies pour aider nos partenaires à être plus efficaces avec leurs ressources et leur temps.
+            li
+              header
+                h4 Communication
+                .icon
+                  i.icon-dots
+              .description
+                p
+                  em Gestion de la relation et de la proximité.
+                p Nous aidons nos partenaires à rencontrer les individus là où ils se trouvent, que ce soit sur le terrain, lors d’un événement, par email, SMS, téléphone ou sur les réseaux sociaux.
+            li
+              header
+                h4 Pilotage
+                .icon
+                  i.icon-loading
+              .description
+                p
+                  em Digital. Rapports et Analyses.
+                p Nous développons des programmes innovants et engageants pour aider nos partenaires à piloter leurs actions en ligne et sur le terrain, à toutes les échelles.
+      section#we-follow
+        .container
+          header
+            h3
+              span Nous #[em accompagnons]
+          ul.content
+            li
+              a(href='mailto:infos@quorumapps.com')
+                .icon
+                  i.icon-town
+                h4 Collectivités territoriales
+            li
+              a(href='mailto:infos@quorumapps.com')
+                .icon
+                  i.icon-society
+                h4 ONG &amp; Associations
+            li
+              a(href='mailto:infos@quorumapps.com')
+                .icon
+                  i.icon-vote
+                h4 Candidats aux élections
+            li
+              a(href='mailto:infos@quorumapps.com')
+                .icon
+                  i.icon-megaphone
+                h4 Leaders d'influence
+      section#tools
+        .container
+          header
+            h3
+              span Des outils #[em opérationnels]
+            p Nous fournissons des applications web et mobile intuitives, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
+          ul.content
+            li
+              .icon
+                i.icon-touch-pad
+              .description
+                h4 Outils intuitifs
+                p Prise en main rapide. Pas de longue session de formation.
+            li
+              .icon
+                i.icon-meeting
+              .description
+                h4 Stratégies adaptées
+                p Partir des usages. Comprendre la dynamique d’un territoire.
+            li
+              .icon
+                i.icon-human66
+              .description
+                h4 Renforcer son organisation
+                p Allouer les bonnes ressources au bon endroit, au bon moment. Plus de perte de temps, pas de perte de ressources.
+            li
               .icon
                 i.icon-data
-            .description
-              p
-                em Data collection et Data intelligence.
-              p Nous donnons du sens aux données en utilisant le pouvoir analytique et logistique des nouvelles technologies pour aider nos partenaires à être plus efficaces avec leurs ressources et leur temps.
-          li
-            header
-              h4 Communication
+              .description
+                h4 Remonter l'information
+                p Remonter l'information du terrain. Qualifier sa base de données. Mieux comprendre les préoccupations et identifier les tendances.
+            li
               .icon
-                i.icon-dots
-            .description
-              p
-                em Gestion de la relation et de la proximité.
-              p Nous aidons nos partenaires à rencontrer les individus là où ils se trouvent, que ce soit sur le terrain, lors d’un événement, par email, SMS, téléphone ou sur les réseaux sociaux.
-          li
-            header
-              h4 Pilotage
+                i.icon-human
+              .description
+                h4 Créer du lien
+                p Utiliser des programmes innovants qui engagent. Changer sa façon d’interagir avec le public. Communiquer de façon individualisée.
+            li
               .icon
-                i.icon-loading
-            .description
-              p
-                em Digital. Rapports et Analyses.
-              p Nous développons des programmes innovants et engageants pour aider nos partenaires à piloter leurs actions en ligne et sur le terrain, à toutes les échelles.
-      section#we-follow
-        header
-          h3
-            span Nous #[em accompagnons]
-        ul.content
-          li
-            a(href='mailto:infos@quorumapps.com')
-              .icon
-                i.icon-town
-              h4 Collectivités territoriales
-          li
-            a(href='mailto:infos@quorumapps.com')
-              .icon
-                i.icon-society
-              h4 ONG &amp; Associations
-          li
-            a(href='mailto:infos@quorumapps.com')
-              .icon
-                i.icon-vote
-              h4 Candidats aux élections
-          li
-            a(href='mailto:infos@quorumapps.com')
-              .icon
-                i.icon-megaphone
-              h4 Leaders d'influence
-      section#tools
-        header
-          h3
-            span Des outils #[em opérationnels]
-          p Nous fournissons des applications web et mobile intuitives, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
-        ul.content
-          li
-            .icon
-              i.icon-touch-pad
-            .description
-              h4 Outils intuitifs
-              p Prise en main rapide. Pas de longue session de formation.
-          li
-            .icon
-              i.icon-meeting
-            .description
-              h4 Stratégies adaptées
-              p Partir des usages. Comprendre la dynamique d’un territoire.
-          li
-            .icon
-              i.icon-human66
-            .description
-              h4 Renforcer son organisation
-              p Allouer les bonnes ressources au bon endroit, au bon moment. Plus de perte de temps, pas de perte de ressources.
-          li
-            .icon
-              i.icon-data
-            .description
-              h4 Remonter l'information
-              p Remonter l'information du terrain. Qualifier sa base de données. Mieux comprendre les préoccupations et identifier les tendances.
-          li
-            .icon
-              i.icon-human
-            .description
-              h4 Créer du lien
-              p Utiliser des programmes innovants qui engagent. Changer sa façon d’interagir avec le public. Communiquer de façon individualisée.
-          li
-            .icon
-              i.icon-increasing
-            .description
-              h4 Impact mesuré
-              p Suivre l’avancement et l’impact de ses actions. Réagir. S'adapter.
+                i.icon-increasing
+              .description
+                h4 Impact mesuré
+                p Suivre l’avancement et l’impact de ses actions. Réagir. S'adapter.
       section#lab
-        header
-          h3
-            span Data #[em Lab]
-          p Utiliser la data pour optimiser, pour prendre des décisions, pour comprendre et s’adapter aux évolutions. Smart Data.
-          p
-            a.button(href='#')
-              i.fa.fa-fw.fa-bookmark-o
-              span Visitez notre blog
-        ul.content
-          li
-            a(href='#')
-              header
-                .icon
-                  i.fa.fa-fw.fa-map-marker
-                h4 Élections départementales 2015
-              p.description Adapter sa stratégie, piloter ses actions de terrain, mesurer le niveau de soutien et l’impact de son action, Quorum a cartographié des cantons en Gironde à l’échelle du Bureau de Vote pour accompagner les candidats jusqu’à la victoire.
-          li
-            a(href='#')
-              header
-                .icon
-                  i.fa.fa-fw.fa-line-chart
-                h4 Lutter contre la mal-inscription sur les listes électorales
-              p.description Mal inscription, non inscription, gestion de la liste électorale ; Quorum accompagne les collectivités territoriales pour lutter contre ce phénomène qui concerne près de 10 millions de Français ; et ainsi faciliter la gestion des enjeux démocratiques, démographiques et logistiques auxquels doit faire face une collectivité.
-          li
-            a(href='#')
-              header
-                .icon
-                  i.fa.fa-fw.fa-database
-                h4 Mastering Data on Twitter
-              p.description Mastering Data on Twitter est un outil analytique développé par Jules Goullée qui permet d’analyser en temps réel à partir d’un mot clé l’évolution et les mots associés sur Twitter.
+        .container
+          header
+            h3
+              span Data #[em Lab]
+            p Utiliser la data pour optimiser, pour prendre des décisions, pour comprendre et s’adapter aux évolutions. Smart Data.
+            p
+              a.button(href='#')
+                i.fa.fa-fw.fa-bookmark-o
+                span Visitez notre blog
+          ul.content
+            li
+              a(href='#')
+                header
+                  .icon
+                    i.fa.fa-fw.fa-map-marker
+                  h4 Élections départementales 2015
+                p.description Adapter sa stratégie, piloter ses actions de terrain, mesurer le niveau de soutien et l’impact de son action, Quorum a cartographié des cantons en Gironde à l’échelle du Bureau de Vote pour accompagner les candidats jusqu’à la victoire.
+            li
+              a(href='#')
+                header
+                  .icon
+                    i.fa.fa-fw.fa-line-chart
+                  h4 Lutter contre la mal-inscription sur les listes électorales
+                p.description Mal inscription, non inscription, gestion de la liste électorale ; Quorum accompagne les collectivités territoriales pour lutter contre ce phénomène qui concerne près de 10 millions de Français ; et ainsi faciliter la gestion des enjeux démocratiques, démographiques et logistiques auxquels doit faire face une collectivité.
+            li
+              a(href='#')
+                header
+                  .icon
+                    i.fa.fa-fw.fa-database
+                  h4 Mastering Data on Twitter
+                p.description Mastering Data on Twitter est un outil analytique développé par Jules Goullée qui permet d’analyser en temps réel à partir d’un mot clé l’évolution et les mots associés sur Twitter.
       section#team
-        header
-          h3
-            span Notre #[em équipe]
-          p Développeurs, politologues, data analystes, UX designer, avocats spécialisés en droit des collectivités et référent CNIL.
-        .content
-          .contact
-            h4 Idées. Étude personnalisée. Nous rejoindre.
+        .container
+          header
+            h3
+              span Notre #[em équipe]
+            p Développeurs, politologues, data analystes, UX designer, avocats spécialisés en droit des collectivités et référent CNIL.
+          .content
+            .contact
+              h4 Idées. Étude personnalisée. Nous rejoindre.
+              p
+                a(href='mailto:infos@quorumapps.com')
+                  i.fa.fa-fw.fa-envelope-o
+            .social
+              h4 Suivez-nous sur les réseaux sociaux.
+              p
+                a(href='//facebook.com/pages/Quorum/691793700953234')
+                  i.icon-facebook
+                a(href='//twitter.com/quorumapps')
+                  i.icon-twitter
+                a(href='//www.linkedin.com/company/10114882')
+                  i.icon-linkedin
+                a(href='//google.com/+Quorumappsdata')
+                  i.icon-google
+          .subscribe
+            h4 Inscrivez-vous pour recevoir notre veille et nos articles :
             p
-              a(href='mailto:infos@quorumapps.com')
-                i.fa.fa-fw.fa-envelope-o
-          .social
-            h4 Suivez-nous sur les réseaux sociaux.
-            p
-              a(href='//facebook.com/pages/Quorum/691793700953234')
-                i.icon-facebook
-              a(href='//twitter.com/quorumapps')
-                i.icon-twitter
-              a(href='//www.linkedin.com/company/10114882')
-                i.icon-linkedin
-              a(href='//google.com/+Quorumappsdata')
-                i.icon-google
-        .subscribe
-          h4 Inscrivez-vous pour recevoir notre veille et nos articles :
-          p
-            input(type='text' placeholder='Email')
-            a.button(href='#')
-              i.fa.fa-fw.fa-pencil
-              span S'inscrire
+              input(type='text' placeholder='Email')
+              a.button(href='#')
+                i.fa.fa-fw.fa-pencil
+                span S'inscrire
     footer#footer
-      .general
-        h3
-          img(src='images/quorumapps.png' alt='Quorum')
-        .about
-          p En utilisant les technologies de Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
-          p De meilleures technologies pour de meilleures actions.
-        .ask-study
-          input(type='button' value='Demander une étude personalisée')
-        .copyright &copy; Copyright 2015
-      .sitemap
-        h3 Plan du site
-        ul
-          li
-            a(href='#') Mentions légales
-          li
-            a(href='#') Notre logo
-          li
-            a(href='#home') Accueil
-          li
-            a(href='#who-are-we') Activités
-          li
-            a(href='#lab') Lab
-          li
-            a(href='#team') Équipe
-          li
-            a(href='mailto:info@quorumapps.com') Tarifs
-          li
-            a(href='//blog.quorumapps.com') Blog
-          li
-            a(href='mailto:info@quorumapps.com') Contact
-      .find-us
-        h3 Nous trouver
-        .details
-          p Quorum a choisi le français <a href='//cloudwat.com'>Cloudwatt</a>, producteur souverain d’energie numérique.
-          ul.addresses
+      .container
+        .general
+          h3
+            img(src='images/quorumapps.png' alt='Quorum')
+          .about
+            p En utilisant les technologies de Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
+            p De meilleures technologies pour de meilleures actions.
+          .ask-study
+            input(type='button' value='Demander une étude personalisée')
+          .copyright &copy; Copyright 2015
+        .sitemap
+          h3 Plan du site
+          ul
             li
-              a(href='mailto:info@quorumapps.com') info@quorumapps.com
+              a(href='#') Mentions légales
             li
-              span 9 rue de Condé
-              br
-              span 33000 Bordeaux
+              a(href='#') Notre logo
             li
-              span 124 avenue de Villiers
-              br
-              span 75017 Paris
+              a(href='#home') Accueil
+            li
+              a(href='#who-are-we') Activités
+            li
+              a(href='#lab') Lab
+            li
+              a(href='#team') Équipe
+            li
+              a(href='mailto:info@quorumapps.com') Tarifs
+            li
+              a(href='//blog.quorumapps.com') Blog
+            li
+              a(href='mailto:info@quorumapps.com') Contact
+        .find-us
+          h3 Nous trouver
+          .details
+            p Quorum a choisi le français <a href='//cloudwat.com'>Cloudwatt</a>, producteur souverain d’energie numérique.
+            ul.addresses
+              li
+                a(href='mailto:info@quorumapps.com') info@quorumapps.com
+              li
+                span 9 rue de Condé
+                br
+                span 33000 Bordeaux
+              li
+                span 124 avenue de Villiers
+                br
+                span 75017 Paris

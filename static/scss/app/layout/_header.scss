@@ -1,8 +1,9 @@
 @include exports('header') {
   #home {
-    margin-top: $nav-height * $base-line-height;
+    padding-top: $nav-height * $base-line-height;
     background-image: url('../images/back.jpg');
     background-size: cover;
+    background-position: center center;
     padding: 1em;
 
     li {
@@ -18,7 +19,7 @@
     }
   }
 
-  @include media($medium-screen-up) {
+  @include susy-media($medium-screen) {
     #home {
         height: 100vh;
     }

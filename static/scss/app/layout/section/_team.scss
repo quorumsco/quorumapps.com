@@ -52,7 +52,7 @@
         }
     }
 
-    @include media($medium-screen-up) {
+    @include susy-media($medium-screen) {
         #team .content {
             @include container;
         }

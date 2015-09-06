@@ -3,7 +3,7 @@
     text-align: center;
   }
 
-  @include media($medium-screen-up) {
+  @include susy-media($medium-screen) {
     #who-are-we .content {
         @include container;
     }

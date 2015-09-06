@@ -27,15 +27,13 @@
             }
         }
 
-        li {
+        li a {
+            display: block;
             background-color: rgba(#000, .8);
             border-radius: 3px;
             padding: 1em;
             margin-bottom: 1em;
-
-            a {
-                color: #fff;
-            }
+            color: #fff;
 
             header {
                 text-align: center;
@@ -57,17 +55,17 @@
         }
     }
 
-  @include media($medium-screen-up) {
+  @include susy-media($medium-screen) {
     #lab .content {
-        @include container;
-    }
+      @include container;
 
-    #lab .content li {
+      li {
         @include span(1 of 3);
 
         &:last-child {
-            @include last;
+          @include last;
         }
+      }
     }
   }
 }
