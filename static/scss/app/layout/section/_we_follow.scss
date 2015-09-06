@@ -6,13 +6,22 @@
 
     h4 {
       text-align: center;
-      @include adjust-font-size-to(ms(1));
+      @include adjust-font-size-to(ms(1.5));
       margin: 0;
+      font-weight: normal;
     }
 
     .icon {
-      @include adjust-font-size-to(ms(10));
+      @include adjust-font-size-to(ms(8));
       text-align: center;
+    }
+
+    a {
+        color: lighten(#000, 50%);
+
+        &:hover {
+            color: #222;
+        }
     }
   }
 }

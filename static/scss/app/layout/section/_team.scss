@@ -1,2 +1,54 @@
 @include exports('team') {
+    #team {
+        background-color: darken(#fff, 4%);
+
+        h4 {
+            text-align: center;
+        }
+
+        .contact a,
+        .social a {
+            @include adjust-font-size-to(ms(6));
+            margin: .25em;
+            color: #222;
+
+            &:hover {
+                color: lighten(#000, 25%);
+            }
+        }
+
+        .content p {
+            text-align: center;
+        }
+
+        .button {
+            display: block;
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            border-radius: 3px;
+            border: 1px solid #222;
+            @include adjust-font-size-to(ms(0), 1.4);
+
+            span:before {
+                content: "";
+                border-right: 1px solid darken(#fff, 20%);
+                margin: 0 .5em 0 .25em;
+                height: 10px;
+            }
+
+            &:hover {
+                color: #222;
+                background-color: #fff;
+
+                span:before {
+                    border-color: lighten(#222, 20%);
+                }
+            }
+        }
+
+        .subscribe p {
+            margin-bottom: 0;
+        }
+    }
 }

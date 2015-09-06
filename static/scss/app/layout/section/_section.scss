@@ -1,9 +1,14 @@
-$header-font-size: 1;
+$header-font-size: ms(3);
+$header-line-height: 1.5;
 
 @include exports('section') {
   section {
     padding: 1em;
     background-color: #fff;
+
+    header {
+      margin: 0 0 2em;
+    }
 
     header h3 {
       font-family: 'Ubuntu', sans-serif;
@@ -13,7 +18,7 @@ $header-font-size: 1;
       margin: 0 0 1em;
 
       span {
-        @include adjust-font-size-to(ms($header-font-size));
+        @include adjust-font-size-to($header-font-size, $header-line-height);
         color: lighten(#000, 60%);
         position: relative;
 
@@ -29,7 +34,7 @@ $header-font-size: 1;
         width: 60px;
         border-bottom: 2px solid #222;
         left: 0;
-        top: $header-font-size * $base-line-height - 3px;
+        top: $header-line-height * $base-line-height - 7px;
       }
     }
   }

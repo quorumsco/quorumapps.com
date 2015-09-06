@@ -1,2 +1,45 @@
 @include exports('tools') {
+    #tools {
+        background-color: rgba(#000, .75);
+        color: #fff;
+
+        header h3 span {
+            color: darken(#fff, 30%);
+
+            em {
+                color: #fff;
+            }
+        }
+
+        header h3 span:after {
+            border-color: #fff;
+        }
+
+        li {
+            display: table;
+            margin-bottom: 1em;
+        }
+
+        .icon {
+            display: table-cell;
+            vertical-align: middle;
+            @include adjust-font-size-to(ms(5));
+        }
+
+        .description {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 1em;
+
+            h4 {
+                margin-bottom: .25em;
+                @include adjust-font-size-to(ms(1));
+            }
+
+            p {
+                font-style: italic;
+                color: darken(#fff, 10%);
+            }
+        }
+    }
 }

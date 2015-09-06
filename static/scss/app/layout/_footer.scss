@@ -1,2 +1,56 @@
 @include exports('footer') {
+    #footer {
+        padding: 1em;
+        color: #fff;
+        background-color: #222;
+
+        h3 {
+            text-align: center;
+
+            img {
+                max-width: 200px;
+            }
+        }
+
+        .ask-study input {
+            width: 100%;
+            border: 1px solid #fff;
+            background-color: transparent;
+            margin-bottom: 1em;
+            &:hover {
+                background-color: rgba(#fff, .2);
+            }
+        }
+
+        & > div:not(:last-child) {
+            margin-bottom: 2em;
+        }
+
+        a {
+            color: darken(#fff, 40%);
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        h3 {
+            @include adjust-font-size-to(ms(1));
+        }
+
+        .addresses li:not(:last-child) {
+            position: relative;
+            margin-bottom: .5em;
+            padding-bottom: .5em;
+
+            &:after {
+                display: block;
+                content: "";
+                border-bottom: 1px solid darken(#fff, 25%);
+                width: 3em;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
 }
