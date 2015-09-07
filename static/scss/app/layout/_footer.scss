@@ -13,11 +13,17 @@
             }
         }
 
-        .ask-study input {
+        .ask-study a {
+            display: block;
+            text-align: center;
+            border-radius: 3px;
             width: 100%;
             border: 1px solid #fff;
             background-color: transparent;
             margin-bottom: 1em;
+            line-height: 2.1em;
+            color: #fff;
+
             &:hover {
                 background-color: rgba(#fff, .2);
             }
