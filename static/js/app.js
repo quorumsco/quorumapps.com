@@ -138,19 +138,36 @@ particlesJS('footer', {
 // 	.setClassToggle("#tools", "visible") // add class toggle
 // 	.addTo(controller);
 //
-// var slide = document.getElementById('slide');
-//
-// $(slide).css('top', $(slide).height() + 15);
-// $(slide).css('visibility', 'visible');
-//
+var slide = $('#slide');
+
+$(slide).css('top', $(slide).height());
+$(slide).css('visibility', 'visible');
+
+var steps = [];
+
+slide.children().each(function() {
+  steps.push({
+    height: $(this).height(),
+    delay: $(this).data('delay'),
+    speed: $(this).data('speed')
+  });
+});
+
+var animation = $(slide);
+steps.forEach(function(e) {
+  animation = animation
+    .delay(e.delay)
+    .animate({top: '-=' + e.height}, e.speed);
+});
+
 // $(slide)
 //   .delay(1000)
-//   .animate({top: "-=72"}, 300)
+//   .animate({top: "-=" + c[0].height()}, 300)
 //   .delay(1500)
-//   .animate({top: "-=72"}, 300)
+//   .animate({top: "-=" + c[1].height()}, 300)
 //   .delay(400)
-//   .animate({top: "-=72"}, 250)
+//   .animate({top: "-=" + c[2].height()}, 250)
 //   .delay(100)
-//   .animate({top: "-=72"}, 250)
+//   .animate({top: "-=" + c[3].height()}, 250)
 //   .delay(700)
-//   .animate({top: "-=72"}, 300);
+//   .animate({top: "-=" + c[4].height()}, 300);

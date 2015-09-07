@@ -45,12 +45,12 @@ html
                 i.fa.fa-fw.fa-envelope-o
     header#home
       .container
-        ul
-          li #[em Optimiser] les politiques publiques
-          li #[em Amplifier] son action
-          li #[em Dynamiser] son mouvement
-          li #[em Gagner] du terrain
-          li Avec #[em Quorum]
+        ul#slide
+          li(data-delay="1000" data-speed="300") #[em Optimiser] les politiques publiques
+          li(data-delay="1500" data-speed="300") #[em Amplifier] son action
+          li(data-delay="400" data-speed="250") #[em Dynamiser] son mouvement
+          li(data-delay="100" data-speed="250") #[em Gagner] du terrain
+          li(data-delay="700" data-speed="300") Avec #[em Quorum]
     main#main
       section#who-are-we
         .container
@@ -278,5 +278,6 @@ html
                 span 124 avenue de Villiers
                 br
                 span 75017 Paris
+    script(src='//code.jquery.com/jquery-2.1.4.min.js')
     script(src='javascripts/particles.min.js')
     script(src='javascripts/app.js')

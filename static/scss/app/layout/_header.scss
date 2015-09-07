@@ -21,6 +21,14 @@
     }
   }
 
+  .container {
+    overflow: hidden;
+  }
+
+  #slide {
+    position: relative;
+  }
+
   @include susy-media($medium-screen) {
     #home {
         height: 100vh;
