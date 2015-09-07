@@ -1,3 +1,33 @@
+(function() {
+    var throttle = function(type, name, obj) {
+        var obj = obj || window;
+        var running = false;
+        var func = function() {
+            if (running) { return; }
+            running = true;
+            requestAnimationFrame(function() {
+                obj.dispatchEvent(new CustomEvent(name));
+                running = false;
+            });
+        };
+        obj.addEventListener(type, func);
+    };
+
+    /* init - you can init any event */
+    throttle("scroll", "optimizedScroll");
+})();
+
+// handle event
+var navbar = document.getElementById('nav');
+window.addEventListener("optimizedScroll", function() {
+  var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  if (scrollTop > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
 // Footer particles animation
 particlesJS('footer', {
   "particles": {

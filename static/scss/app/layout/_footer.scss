@@ -66,6 +66,11 @@
         canvas {
           @include position(absolute, 0 0 0 0);
         }
+
+        .container {
+          position: relative;
+          z-index: 1;
+        }
     }
 
     @include susy-media($medium-screen) {

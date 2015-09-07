@@ -5,10 +5,14 @@ $nav-border-color: rgba(#000, .2);
   #nav {
     @include position(fixed, 0 0 auto 0);
     @include clearfix;
-    background-color: #fff;
+    background-color: darken(#fff, 4%);
     z-index: 5;
     padding: 0 1em;
     // height: 2*$base-line-height;
+
+    &.scrolled {
+      background-color: rgba(darken(#fff, 4%), .85);
+    }
 
     h1 {
       @include adjust-font-size-to(ms(0), 2);

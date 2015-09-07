@@ -33,20 +33,22 @@
             border-radius: 3px;
             padding: 1em;
             margin-bottom: 1em;
-            background-size: auto, cover;
 
             $darken: rgba(#000, .6);
             $gradient: linear-gradient($darken, $darken);
 
             &.isoloir {
-              @include background($gradient, url('../images/isoloir.jpg') center center);
+              @include background($gradient, url('../images/isoloir.jpg') top center);
+              background-size: auto, cover;
             }
 
             &.mailbox {
-              @include background($gradient, url('../images/mailbox.jpg') center center);
+              @include background($gradient, url('../images/mailbox.jpg') top center);
+              background-size: auto, cover;
             }
             &.network {
-              @include background($gradient, url('../images/network.png') center center);
+              @include background($gradient, url('../images/network.png') top center);
+              background-size: auto, cover;
             }
 
             a {
