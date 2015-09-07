@@ -62,6 +62,12 @@
         &:last-child {
           @include last;
         }
+
+        &:hover {
+          h4 {
+            border-bottom: 1px solid #242424;
+          }
+        }
       }
     }
   }
