@@ -1,7 +1,11 @@
 @include exports('tools') {
+  $darken: rgba(#000, .6);
+  $gradient: linear-gradient($darken, $darken);
+
     #tools {
-        background-color: rgba(#000, .75);
         color: #fff;
+        @include background(url('../images/pattern.png'), $gradient, url('../images/tools.jpg') center center);
+        background-size: auto, auto, cover;
 
         header h3 span {
             color: darken(#fff, 30%);
