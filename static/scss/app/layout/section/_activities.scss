@@ -6,7 +6,7 @@
       header {
         @include clearfix;
         border-bottom: 1px solid rgba(#000, .2);
-        padding-bottom: .5em;
+        padding-bottom: 1em;
 
         h4 {
           @include adjust-font-size-to(ms(1));
