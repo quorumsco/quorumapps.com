@@ -21,6 +21,10 @@
             text-align: center;
         }
 
+        .form-input input {
+          height: 1.4*$base-line-height + 2px; // Button border
+        }
+
         .button {
             display: block;
             text-align: center;
@@ -63,6 +67,17 @@
             &:last-child {
                 @include last;
             }
+        }
+
+        #team .subscribe {
+          .form-input {
+            margin-right: 10em;
+          }
+
+          .form-submit {
+            float: right;
+            width: 9em;
+          }
         }
     }
 }

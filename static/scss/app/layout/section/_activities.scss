@@ -42,15 +42,19 @@
 
   @include susy-media($medium-screen) {
     #activities .content {
-        @include container;
+      @include container;
 
-        li {
-          @include span(1 of 3);
+      li {
+        @include span(1 of 3);
 
-          &:last-child {
-            @include last;
-          }
+        &:not(:last-child) {
+          margin-bottom: 0;
         }
+
+        &:last-child {
+          @include last;
+        }
+      }
     }
   }
 }

@@ -27,13 +27,16 @@
             }
         }
 
-        li a {
+        li {
             display: block;
             background-color: rgba(#000, .8);
             border-radius: 3px;
             padding: 1em;
             margin-bottom: 1em;
-            color: #fff;
+
+            a {
+              color: #fff;
+            }
 
             header {
                 text-align: center;
@@ -58,14 +61,26 @@
   @include susy-media($medium-screen) {
     #lab .content {
       @include container;
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(stretch);
+      @include flex-wrap(wrap);
 
       li {
         @include span(1 of 3);
+        @include flex(1 1);
+        @include align-self(stretch);
 
         &:last-child {
           @include last;
         }
       }
+    }
+
+    #lab .button {
+      display: inline-block;
+      width: 15em;
+      vertical-align: top;
     }
   }
 }

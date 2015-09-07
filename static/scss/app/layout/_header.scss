@@ -1,16 +1,18 @@
 @include exports('header') {
   #home {
-    padding-top: $nav-height * $base-line-height;
     background-image: url('../images/back.jpg');
     background-size: cover;
     background-position: center center;
     padding: 1em;
+    padding-top: ($nav-height + 0.5) * $base-line-height;
+    box-sizing: border-box;
 
     li {
       font-family: 'Raleway', sans-serif;
       @include adjust-font-size-to(ms(2), 1.5);
       font-weight: 800;
       color: rgba(#fff, .7);
+      text-transform: uppercase;
 
       em {
         color: #fff;
@@ -22,6 +24,11 @@
   @include susy-media($medium-screen) {
     #home {
         height: 100vh;
+        padding-top: ($nav-height + 1.5) * $base-line-height;
+
+        li {
+          @include adjust-font-size-to(ms(8), 2.2);
+        }
     }
   }
 }

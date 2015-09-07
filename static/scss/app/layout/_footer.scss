@@ -38,6 +38,10 @@
             @include adjust-font-size-to(ms(1));
         }
 
+        .general, .sitemap, .find-us {
+          @include adjust-font-size-to(ms(-1));
+        }
+
         .addresses li:not(:last-child) {
             position: relative;
             margin-bottom: .5em;
@@ -52,6 +56,11 @@
                 bottom: 0;
             }
         }
+
+        input {
+          font-weight: normal;
+          font-size: 1em;
+        }
     }
 
     @include susy-media($medium-screen) {
@@ -59,12 +68,18 @@
             @include container;
         }
 
-        #footer .container > div {
-            @include span(1 of 3);
+        #footer {
+          .general {
+            @include span(isolate 5 of 12 at 1 of 12);
+          }
 
-            &:last-child {
-                @include last;
-            }
+          .sitemap {
+            @include span(isolate 3 of 12 at 6 of 12);
+          }
+
+          .find-us {
+            @include span(isolate 5 of 12 at 8 of 12 last);
+          }
         }
 
         #footer h3 {

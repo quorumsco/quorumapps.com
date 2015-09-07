@@ -44,12 +44,13 @@ html
               a(href='mailto:infos@quorumapps.com')
                 i.fa.fa-fw.fa-envelope-o
     header#home
-      ul
-        li #[em Optimiser] les politiques publiques
-        li #[em Amplifier] son action
-        li #[em Dynamiser] son mouvement
-        li #[em Gagner] du terrain
-        li Avec #[em Quorum]
+      .container
+        ul
+          li #[em Optimiser] les politiques publiques
+          li #[em Amplifier] son action
+          li #[em Dynamiser] son mouvement
+          li #[em Gagner] du terrain
+          li Avec #[em Quorum]
     main#main
       section#who-are-we
         .container
@@ -223,11 +224,13 @@ html
                   i.icon-google
           .subscribe
             h4 Inscrivez-vous pour recevoir notre veille et nos articles :
-            p
-              input(type='text' placeholder='Email')
-              a.button(href='#')
-                i.fa.fa-fw.fa-pencil
-                span S'inscrire
+            .form
+              .form-submit
+                a.button(href='#')
+                  i.fa.fa-fw.fa-pencil
+                  span S'inscrire
+              .form-input
+                input(type='text' placeholder='Email')
     footer#footer
       .container
         .general
