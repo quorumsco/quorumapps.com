@@ -7,7 +7,7 @@ $header-line-height: 1.5;
     background-color: #fff;
 
     .container > header {
-      margin: 0 0 4em;
+      margin: 0 0 3em;
     }
 
     header h3 {
@@ -15,7 +15,7 @@ $header-line-height: 1.5;
       text-align: center;
       text-transform: uppercase;
       font-weight: 400;
-      margin: 0 0 4em;
+      margin: 0 0 3em;
 
       span {
         @include adjust-font-size-to($header-font-size, $header-line-height);

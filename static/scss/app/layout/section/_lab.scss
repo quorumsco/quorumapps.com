@@ -34,7 +34,7 @@
             padding: 1em;
             margin-bottom: 1em;
 
-            $darken: rgba(#000, .6);
+            $darken: rgba(#000, .4);
             $gradient: linear-gradient($darken, $darken);
 
             &.isoloir {
@@ -53,6 +53,7 @@
 
             a {
               color: #fff;
+              border-radius: 3px;
             }
 
             header {
@@ -124,6 +125,8 @@
         }
 
         &:hover {
+          background-color: rgba(#000, .7);
+
           header {
             visibility: hidden;
           }

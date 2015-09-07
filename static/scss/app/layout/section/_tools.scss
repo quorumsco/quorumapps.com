@@ -63,6 +63,10 @@
             }
           }
         }
+
+        .row {
+          @include clearfix;
+        }
     }
   @include susy-media($medium-screen) {
     #tools .content {
@@ -76,6 +80,16 @@
         &:nth-child(2n+1) {
             @include last;
         }
+    }
+  }
+
+  @include susy-media($large-screen) {
+    #tools .content li:nth-child(2n) {
+      @include span(isolate 4 of 12 at 2);
+    }
+
+    #tools .content li:nth-child(2n+1) {
+      @include span(isolate 4 of 12 at 8);
     }
   }
 }

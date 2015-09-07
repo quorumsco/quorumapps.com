@@ -85,10 +85,18 @@
 
           .sitemap {
             @include span(isolate 3 of 12 at 6 of 12);
+
+            h3 {
+              margin-bottom: 2.6em;
+            }
           }
 
           .find-us {
             @include span(isolate 5 of 12 at 8 of 12 last);
+
+            h3 {
+              margin-bottom: 2.6em;
+            }
           }
         }
 
