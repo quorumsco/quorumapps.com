@@ -141,7 +141,7 @@ particlesJS('footer', {
 var slide = $('#slide');
 
 $(slide).css('top', $(slide).height());
-$(slide).css('visibility', 'visible');
+// $(slide).css('visibility', 'visible');
 
 var steps = [];
 
@@ -159,15 +159,3 @@ steps.forEach(function(e) {
     .delay(e.delay)
     .animate({top: '-=' + e.height}, e.speed);
 });
-
-// $(slide)
-//   .delay(1000)
-//   .animate({top: "-=" + c[0].height()}, 300)
-//   .delay(1500)
-//   .animate({top: "-=" + c[1].height()}, 300)
-//   .delay(400)
-//   .animate({top: "-=" + c[2].height()}, 250)
-//   .delay(100)
-//   .animate({top: "-=" + c[3].height()}, 250)
-//   .delay(700)
-//   .animate({top: "-=" + c[4].height()}, 300);
