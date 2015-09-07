@@ -6,6 +6,7 @@ $nav-border-color: rgba(#000, .2);
     @include position(fixed, 0 0 auto 0);
     background-color: #fff;
     z-index: 5;
+    padding: 0 1em;
   }
 
   .nav-brand {
