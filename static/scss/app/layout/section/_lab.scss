@@ -83,8 +83,10 @@
 
       li {
         @include span(1 of 3);
+        @include display(flex);
         @include flex(1 1);
         @include align-self(stretch);
+        padding: 0;
 
         &:last-child {
           @include last;
@@ -96,6 +98,38 @@
       display: inline-block;
       width: 15em;
       vertical-align: top;
+    }
+
+    #lab {
+      li a {
+        display: block;
+        position: relative;
+        @include flex(1 1);
+        @include align-self(stretch);
+        padding: 1em;
+        @include transform-style(preserve-3d);
+
+        header {
+          @include position(absolute, 0 0 0 0);
+          // position: relative;
+          top: 45%;
+          transform: translateY(-50%);
+        }
+
+        .description {
+          visibility: hidden;
+        }
+
+        &:hover {
+          header {
+            visibility: hidden;
+          }
+
+          .description {
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 }
