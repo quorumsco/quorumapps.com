@@ -38,12 +38,13 @@
 
             h4 {
                 margin-bottom: .25em;
-                @include adjust-font-size-to(ms(1));
+                @include adjust-font-size-to(ms(1.5));
             }
 
             p {
                 font-style: italic;
                 color: #b3b3b3;
+                @include adjust-font-size-to(ms(-0.2));
             }
         }
 
@@ -70,6 +71,7 @@
 
     #tools .content li {
         @include span(1 of 2);
+        margin-bottom: 4em;
 
         &:nth-child(2n+1) {
             @include last;
