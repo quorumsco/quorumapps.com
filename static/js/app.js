@@ -159,3 +159,8 @@ steps.forEach(function(e) {
     .delay(e.delay)
     .animate({top: '-=' + e.height}, e.speed);
 });
+
+$('.nav-toggle a').first().on('click', function(e) {
+  e.preventDefault();
+  $('#nav').toggleClass('show-menu');
+});

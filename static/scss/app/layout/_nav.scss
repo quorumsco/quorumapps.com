@@ -8,7 +8,7 @@ $nav-border-color: rgba(#000, .2);
     background-color: #fff;
     z-index: 5;
     padding: 0 1em;
-    height: 2*$base-line-height;
+    // height: 2*$base-line-height;
 
     h1 {
       @include adjust-font-size-to(ms(0), 2);
@@ -39,24 +39,34 @@ $nav-border-color: rgba(#000, .2);
     float: right;
   }
 
-  // .main-links li {
-  //   border-top: 1px solid $nav-border-color;
-  //   padding: 0 1em;
-  // }
-  //
-  // .social-links {
-  //   border-top: 1px solid $nav-border-color;
-  //   border-bottom: 1px solid $nav-border-color;
-  //
-  //   li {
-  //     display: inline-block;
-  //     vertical-align: top;
-  //     padding: 0 1em;
-  //   }
-  // }
-
   .nav-links {
     display: none;
+  }
+
+  #nav.show-menu {
+    .social-links {
+      li {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      li:not(:last-child) {
+        padding: 0 1em 0 0;
+      }
+    }
+
+    .nav-links {
+      display: block;
+
+      a {
+        @include adjust-font-size-to(ms(1), 1.5);
+      }
+
+      .fa {
+        position: relative;
+        top: -1px;
+      }
+    }
   }
 
   .nav-brand a,
@@ -75,7 +85,7 @@ $nav-border-color: rgba(#000, .2);
     #nav {
       .nav-links {
         display: block;
-        height: 2*$base-line-height;
+        // height: 2*$base-line-height;
         float: right;
       }
 
