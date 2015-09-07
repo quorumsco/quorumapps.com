@@ -28,6 +28,7 @@
             display: table-cell;
             vertical-align: middle;
             @include adjust-font-size-to(ms(5));
+            width: 36px;
         }
 
         .description {
@@ -42,8 +43,24 @@
 
             p {
                 font-style: italic;
-                color: darken(#fff, 10%);
+                color: #b3b3b3;
             }
+        }
+
+        li:hover {
+          .icon {
+            color: #b3b3b3;
+          }
+
+          .description {
+            p {
+              color: #fff;
+            }
+
+            h4 {
+              color: #b3b3b3;
+            }
+          }
         }
     }
   @include susy-media($medium-screen) {

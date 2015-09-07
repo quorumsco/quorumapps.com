@@ -2,6 +2,14 @@
   #activities {
     background-color: darken(#fff, 4%);
 
+    p {
+      color: #434b53;
+    }
+
+    .description p:first-child {
+      text-align: left;
+    }
+
     .content {
       header {
         @include clearfix;
