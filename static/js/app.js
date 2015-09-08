@@ -146,28 +146,28 @@ particlesJS('footer', {
   }
 });
 
-//
-// // Operational tools paralaxe scrolling and animation
-// var controller = new ScrollMagic.Controller();
-// new ScrollMagic.Scene({triggerHook: "onEnter", triggerElement: "#tools", duration: "200%"})
-//   .setTween("#tools > .background", {y: "80%", ease: Linear.easeNone})
-//   .addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#home", duration: "100%"})
-// 	.setClassToggle(".nav li:nth-child(1) a", "active") // add class toggle
-// 	.addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#approach", duration: $('#approach').outerHeight() + $('#help').outerHeight() + $('#tools').outerHeight()})
-// 	.setClassToggle(".nav li:nth-child(2) a", "active") // add class toggle
-// 	.addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#lab", duration: $('#lab').outerHeight()})
-// 	.setClassToggle(".nav li:nth-child(3) a", "active") // add class toggle
-// 	.addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#team", duration: $('#team').outerHeight()})
-// 	.setClassToggle(".nav li:nth-child(4) a", "active") // add class toggle
-// 	.addTo(controller);
-// new ScrollMagic.Scene({triggerElement: "#tools"})
-// 	.setClassToggle("#tools", "visible") // add class toggle
-// 	.addTo(controller);
-//
+
+// Operational tools paralaxe scrolling and animation
+var controller = new ScrollMagic.Controller();
+new ScrollMagic.Scene({triggerHook: "onEnter", triggerElement: "#tools", duration: "200%"})
+  .setTween("#tools > .background", {y: "80%", ease: Linear.easeNone})
+  .addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#home", duration: "100%"})
+	.setClassToggle("nav .main-links li:nth-child(1) a", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#who-are-we", duration: $('#who-are-we').outerHeight() + $('#activities').outerHeight() + $('#we-follow').outerHeight() + $('#tools').outerHeight()})
+	.setClassToggle("nav .main-links li:nth-child(2) a", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#lab", duration: $('#lab').outerHeight()})
+	.setClassToggle("nav .main-links li:nth-child(3) a", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#team", duration: $('#team').outerHeight()})
+	.setClassToggle("nav .main-links li:nth-child(4) a", "active") // add class toggle
+	.addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#tools"})
+	.setClassToggle("#tools", "visible") // add class toggle
+	.addTo(controller);
+
 var slide = $('#slide');
 
 $(slide).css('top', $(slide).height());

@@ -27,7 +27,8 @@ $nav-border-color: rgba(#000, .2);
     a {
       color: lighten(#000, 50%);
 
-      &:hover {
+      &:hover,
+      &.active {
         color: #222;
       }
     }
