@@ -169,25 +169,35 @@ new ScrollMagic.Scene({triggerElement: "#tools"})
 	.addTo(controller);
 
 var slide = $('#slide');
+var height = $(slide).height();
 
-$(slide).css('top', $(slide).height());
-// $(slide).css('visibility', 'visible');
+var translateY = function(value) {
+    return 'translateY(' + value + 'px)';
+}
+
+slide.css('transform', translateY(height));
+slide.css('visibility', 'visible');
 
 var steps = [];
 
 slide.children().each(function() {
   steps.push({
     height: $(this).height(),
-    delay: $(this).data('delay'),
-    speed: $(this).data('speed')
+    delay: $(this).data('delay')
   });
 });
 
 var animation = $(slide);
+var level = height;
 steps.forEach(function(e) {
+  level -= e.height;
+  let c = level;
   animation = animation
-    .delay(e.delay)
-    .animate({top: '-=' + e.height}, e.speed);
+    .delay(e.delay + 300)
+    .queue(function(next) {
+        slide.css('transform', translateY(c));
+        next();
+    });
 });
 
 $('.nav-toggle a').first().on('click', function(e) {
