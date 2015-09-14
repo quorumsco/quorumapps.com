@@ -5,7 +5,6 @@ $nav-border-color: rgba(#000, .2);
   #nav {
     @include position(fixed, 0 0 auto 0);
     @include clearfix;
-/*    background-color: darken(#fff, 4%);*/
     background-color: transparent;
     z-index: 5;
     padding: 0 1em;
