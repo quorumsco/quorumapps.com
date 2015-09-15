@@ -17,11 +17,12 @@
     }
 
     a {
-        color: lighten(#000, 50%);
+        color: #4962AD;
 
         &:hover {
 /*            div.icon { */
-             color: #4962AD;
+                color: lighten(#000, 50%);
+                color: #000;
 /*            }*/
         }
     }

@@ -24,6 +24,10 @@
 
         .icon {
           @include adjust-font-size-to(ms(3), 1);
+
+          i {
+              color: #4962AD;
+          }
         }
 
         h4 {

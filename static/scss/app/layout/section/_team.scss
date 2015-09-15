@@ -10,11 +10,10 @@
         .social a {
             @include adjust-font-size-to(ms(9));
             margin: .25em;
-            color: #222;
+            color: #4962AD;
 
             &:hover {
-                color: lighten(#000, 35%);
-                color: #4962AD;
+                color: #222;
             }
         }
 
@@ -31,9 +30,9 @@
             text-align: center;
 /*            background-color: #222;*/
             background-color: #fff;
-            color: #222;
+            color: #4962AD;
             border-radius: 3px;
-            border: 1px solid #222;
+            border: 1px solid #4962AD;
             @include adjust-font-size-to(ms(0), 1.4);
 
             span:before {
