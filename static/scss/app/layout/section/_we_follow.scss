@@ -20,7 +20,9 @@
         color: lighten(#000, 50%);
 
         &:hover {
-            color: #222;
+            div.icon {
+             color: #4962AD;
+            }
         }
     }
   }

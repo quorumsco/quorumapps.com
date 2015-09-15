@@ -3,8 +3,8 @@
         .button {
             display: block;
             text-align: center;
-            background-color: #222;
-            color: #fff;
+            background-color: #fff;
+            color: #222;
             border-radius: 3px;
             border: 1px solid #222;
             margin-top: 1em;
@@ -18,8 +18,8 @@
             }
 
             &:hover {
-                color: #222;
-                background-color: #fff;
+                color: #fff;
+                background-color: #222;
 
                 span:before {
                     border-color: lighten(#222, 20%);

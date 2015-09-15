@@ -18,6 +18,7 @@
 
         h4 {
           @include adjust-font-size-to(ms(1));
+          color: #4962AD;
         }
 
         .icon {
@@ -65,7 +66,7 @@
 
         &:hover {
           h4 {
-            border-bottom: 1px solid #242424;
+            border-bottom: 1px solid #4962AD;
           }
         }
       }
