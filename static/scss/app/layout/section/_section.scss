@@ -21,10 +21,11 @@ $header-line-height: 1.5;
         @include adjust-font-size-to($header-font-size, $header-line-height);
         color: lighten(#000, 60%);
         position: relative;
-        color: #f38632;
-        
+        color: #999;
+
         em {
           font-style: normal;
+          color: #f38632;
         }
       }
 

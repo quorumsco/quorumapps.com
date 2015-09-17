@@ -21,6 +21,13 @@
   font-style: normal;
 }
 
+body.en :lang(fr) {
+  display: none;
+}
+body.fr :lang(en) {
+  display: none;
+}
+
 i[class^='icon-'],
 i[class*=' icon-'] {
   font-family: 'quorum';

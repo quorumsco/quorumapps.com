@@ -10,10 +10,10 @@
         .social a {
             @include adjust-font-size-to(ms(9));
             margin: .25em;
-            color: #4962AD;
+            color: grey;
 
             &:hover {
-                color: #222;
+                color: #4962AD;
             }
         }
 

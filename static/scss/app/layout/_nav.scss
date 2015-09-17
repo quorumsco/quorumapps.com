@@ -30,6 +30,7 @@ $nav-border-color: rgba(#000, .2);
       &:hover,
       &.active {
         color: #222;
+        color: #4962AD;
       }
     }
   }
@@ -57,13 +58,18 @@ $nav-border-color: rgba(#000, .2);
         vertical-align: top;
       }
 
-      li:not(:last-child) {
+      li:not(:nth-child(5)):not(:last-child) {
         padding: 0 1em 0 0;
       }
     }
 
     .nav-links {
       display: block;
+
+      img {
+        position: relative;
+        width: 1.28571429em;
+      }
 
       a {
         @include adjust-font-size-to(ms(1), 1.5);
@@ -123,10 +129,19 @@ $nav-border-color: rgba(#000, .2);
 
         li {
           margin-left: 1em;
+          &:nth-child(6) {
+            margin-left: 0;
+          }
 
           i[class^='icon-'] {
             position: relative;
             top: 1px;
+          }
+
+          img {
+            position: relative;
+            top: 2px;
+            width: 1.28571429em;
           }
 
           &:nth-child(3):after {
@@ -134,6 +149,12 @@ $nav-border-color: rgba(#000, .2);
             border-right: 1px solid rgba(lighten(#000, 50%), .75);
             padding-left: 1em;
           }
+          &:nth-child(4):after {
+            content: "";
+            border-right: 1px solid rgba(lighten(#000, 50%), .75);
+            padding-left: 1em;
+          }
+
         }
       }
 

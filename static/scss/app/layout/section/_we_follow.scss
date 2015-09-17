@@ -17,13 +17,10 @@
     }
 
     a {
-        color: #4962AD;
+        color: grey;
 
         &:hover {
-/*            div.icon { */
-                color: lighten(#000, 50%);
-                color: #000;
-/*            }*/
+            color: #4962AD;
         }
     }
   }
