@@ -58,26 +58,34 @@ html
                 img(src='images/french.jpg' alt='Français')
     header#home
       .container(lang="fr")
-        ul#slide
-          li(data-delay="100" data-speed="300") #[em Optimiser] les politiques publiques
-          li(data-delay="1500" data-speed="300") #[em Amplifier] son action
-          li(data-delay="400" data-speed="250") #[em Dynamiser] son mouvement
-          li(data-delay="100" data-speed="250") #[em Gagner] du terrain
-          li(data-delay="700" data-speed="300") Avec #[em Quorum]
+        ul
+          li Vos #[em actions]. nos #[em technologies].
+          hr
+          span#slide
+          div(id="typed-strings")
+            p <em>Optimiser</em> les politiques publiques
+            p <em>Amplifier</em> son action
+            p <em>Dynamiser</em> son mouvement
+            p <em>Gagner</em> du terrain
+        ul
+          li.subtitle avec #[em QUORUM].
       .container(lang="en")
         ul
-          li #[em Build] a movement
-          li Campaign #[em smarter]
-          li #[em Deliver] ROI
-          li #[em Empower] your future
-          li with #[em Quorum]
+          li #[em Your] actions. #[em our] technologies.
+          div(id="typed-strings")
+            p <em>Build</em> a mouvement
+            p Campaign <em>smarter</em>
+            p <em>Deliver</em> roi
+            p <em>Empower</em> your future
+        ul
+          li.subtitle with #[em QUORUM].
     main#main
       section#who-are-we
         .container(lang="fr")
           header
             h3
               span Qui #[em sommes-nous ?]
-            p Nous fournissons des #[strong solutions technologiques] pour aider nos partenaires à mener des actions #[strong innovantes], #[strong impactantes], et centrées sur les #[strong individus] ; des actions qui atteignent leurs objectifs et apportent du #[strong changement].
+            p Nous fournissons #[strong la plateforme] qui apporte les solutions technologiques pour aider nos partenaires à mener des actions #[strong innovantes], #[strong impactantes], et centrées sur les #[strong individus] ; des actions qui atteignent leurs objectifs et apportent du #[strong changement].
           .content
             .description
               p La dernière décennie a consacré l’utilisation d’Internet et des réseaux sociaux comme une nouvelle façon d’interagir au sein de la #[strong société].
@@ -88,12 +96,12 @@ html
         .container(lang="en")
           header
             h3
-              span Who #[em we are ?]
-            p We provide #[strong technology features ] to help our clients build #[strong meaningful], #[strong people-centered], and #[strong data driven] actions, that achieve their strategic goals and make a #[strong change].
+              span Who #[em we are]
+            p #[strong We build web and mobile apps and] provide technology to help our clients build #[strong meaningful], #[strong people-centered], and #[strong data driven] actions, that achieve their strategic goals and make a #[strong change].
           .content
             .description
               p We rely on data to drive decisions and constantly look for new ways to #[strong solve problems].
-              p We design apps based on the latest research in politial and Data Science and the opportunities offered by Open Data, Big Data, and new technologies. 
+              p We design our app based on the latest research in politial and Data Science and the opportunities offered by Open Data, Big Data, and new technologies. 
               p Smart #[strong campaigns], smart #[strong actions] and #[strong causes] will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
               p 
             .mockup
@@ -130,7 +138,7 @@ html
               .description
                 p
                   em Digital. Rapports et Analyses.
-                p Nous développons des programmes innovants et engageants pour aider nos partenaires à piloter leurs actions en ligne et sur le terrain, à toutes les échelles.
+                p nous développons une plateforme innovante et engageante pour aider nos partenaires à piloter leurs actions en ligne et sur le terrain, à toutes les échelles.
         .container(lang="en")
           header
             h3
@@ -162,7 +170,7 @@ html
                   i.icon-loading
               .description
                 p
-                  em Digital. Rapports et Analyses.
+                  em Digitally sophisticated platform
                 p We design our apps to be intuitive and engaging to help you to drive your actions both online and offline.
       section#we-follow
         .container(lang="fr")
@@ -209,7 +217,7 @@ html
               a(href='mailto:info@quorumapps.com')
                 .icon
                   i.icon-vote
-                h4 Politics
+                h4 Politics & Campaigners
             li
               a(href='mailto:info@quorumapps.com')
                 .icon
@@ -222,7 +230,7 @@ html
             header
               h3
                 span Des outils #[em opérationnels]
-              p Nous fournissons les applications web et mobiles intuitives, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
+              p Quorum, c’est une application web et mobile intuitive, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
             ul.content
               .row
                 li
@@ -355,22 +363,22 @@ html
                 header
                   .icon
                     i.fa.fa-fw.fa-map-marker
-                  h4 French Election 2015
-                p.description Departementales 2015 & Régionales 2015.
+                  h4 French Local Elections 2015
+                p.description Departementales March 2015 and Regionales December 2015. Tools to find voters, persuade and turn out them. Target priority areas and track in real time your progress. Smart Canvassing. Collect Data and Measure Public Sentiment. Connect people with the right information and right timing.
             li.mailbox
               a(href='#' onClick="event.preventDefault();")
                 header
                   .icon
                     i.fa.fa-fw.fa-line-chart
-                  h4 Vote Registration
-                p.description We work with Public Administration to fight for Vote Registration.
+                  h4 Voter Registration
+                p.description Voter Registration. We help Public Administration in their mission to increase access to voting at the local level. Find technological and data driven solutions to logistical problems. Deliver targeted messages. Expand access to the ballot box
             li.network
               a(href='#' onClick="event.preventDefault();")
                 header
                   .icon
                     i.fa.fa-fw.fa-database
-                  h4 Mastering Data on Twitter
-                p.description Mastering Data on Twitter is an analytical tool fot twitter.                
+                  h4 Mastering Data
+                p.description Is an analytics tool for Twitter. See the connections between words and mentions on twitter on an interactive map
       section#team
         .container(lang="fr")
           header
@@ -410,12 +418,12 @@ html
             p Developpers, campaigners, data analysts, UX/UI designer, legal expert; we believe better actions start with better tools. 
           .content
             .contact
-              h4 We'd like to hear from you ! Get in touch.
+              h4 We'd like to hear from you ! Get in touch
               p
                 a(href='mailto:info@quorumapps.com')
                   i.fa.fa-fw.fa-envelope-o
             .social
-              h4 Follow us.
+              h4 Follow us
               p
                 a(href='//facebook.com/pages/Quorum/691793700953234')
                   i.icon-facebook
@@ -440,7 +448,7 @@ html
           h3
             img(src='images/quorumapps.png' alt='Quorum')
           .about
-            p En utilisant les technologies de Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
+            p En utilisant la plateforme Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
             p De meilleures technologies pour de meilleures actions.
           .ask-study
             a.button(href='mailto:info@quorumapps.com') Demander une étude personalisée
@@ -531,5 +539,6 @@ html
     script(src='javascripts/TweenMax.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js')
     script(src='javascripts/plugins/animation.gsap.js')
+    script(src="javascripts/typed.js")
     script(src='javascripts/particles.min.js')
     script(src='javascripts/app.js')

@@ -5,10 +5,10 @@ $nav-border-color: rgba(#000, .2);
   #nav {
     @include position(fixed, 0 0 auto 0);
     @include clearfix;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     z-index: 5;
     padding: 0 1em;
-    // height: 2*$base-line-height;
+    height: 2*$base-line-height;
 
     &.scrolled {
       background-color: rgba(darken(#fff, 4%), .85);
@@ -26,11 +26,11 @@ $nav-border-color: rgba(#000, .2);
 
     a {
       color: lighten(#000, 50%);
+/*      text-transform: uppercase;*/
 
       &:hover,
       &.active {
-        color: #222;
-        color: #4962AD;
+        color: #4741c5;
       }
     }
   }

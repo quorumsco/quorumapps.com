@@ -7,28 +7,73 @@
     padding-top: ($nav-height + 0.5) * $base-line-height;
     box-sizing: border-box;
 
-    li {
+    .container {
+        padding-top: 10%;
+/*      overflow: hidden;*/
+    }
+
+    hr {
+      margin: 5% 45% 4% 45%;
+      border-bottom: 0.3em solid #fff;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li, span, #typed-strings {
+      text-align: center;
       font-family: 'Raleway', sans-serif;
-      @include adjust-font-size-to(ms(5), 1.5);
-      font-weight: 800;
-      color: rgba(#fff, .6);
+      @include adjust-font-size-to(ms(6), 1.5);
+      font-weight: 800; 
+      color: rgba(#fff, 1);
       text-transform: uppercase;
 
       em {
         color: #fff;
         font-style: normal;
       }
+
+      p {
+        text-align: center;
+      }
+    }
+    span {
+      font-family: 'Oxygen', sans-serif;
+      @include adjust-font-size-to(ms(5), 1.5);
+      color: #fff;
+    }
+    li.subtitle {
+      font-family: 'Oxygen', sans-serif;
+      @include adjust-font-size-to(ms(4), 1);
     }
   }
 
-  .container {
-    overflow: hidden;
-  }
-
   #slide {
-    @include single-transition(transform, .3s);
+    /*@include single-transition(transform, .3s);
     transform: translateY(100%);
-    visibility: hidden;
+    visibility: hidden;*/
+  }
+  
+  .typed-cursor {
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
   @include susy-media($medium-screen) {
@@ -36,8 +81,19 @@
         height: 100vh;
         padding-top: ($nav-height + 1.5) * $base-line-height;
 
-        li {
-          @include adjust-font-size-to(ms(8), 2.2);
+        li, span, #typed-strings {
+          @include adjust-font-size-to(ms(14), 3);
+        }
+        span {
+          font-family: 'Oxygen', sans-serif;
+          text-transform: none;
+          @include adjust-font-size-to(ms(12), 3); 
+        }
+        li.subtitle {
+          font-family: 'Oxygen', sans-serif;
+          margin-top: 0.7em;
+          text-transform: none;
+          @include adjust-font-size-to(ms(9), 2);
         }
     }
   }

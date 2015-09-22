@@ -169,36 +169,48 @@ new ScrollMagic.Scene({triggerElement: "#tools"})
 	.addTo(controller);
 
 var slide = $('#slide');
-var height = $(slide).height();
 
-var translateY = function(value) {
-    return 'translateY(' + value + 'px)';
-}
-
-slide.css('transform', translateY(height));
-slide.css('visibility', 'visible');
-
-var steps = [];
-
-slide.children().each(function() {
-  steps.push({
-    height: $(this).height(),
-    delay: $(this).data('delay')
-  });
+$(slide).typed({
+  stringsElement: $('#typed-strings'),
+  typeSpeed: 10,
+  backDelay: 800,
+  backSpeed: -10,
+  contentType: 'html',
+  loop: true,
+  showCursor: true,
+  cursorChar: " |"
 });
 
-var animation = $(slide);
-var level = height;
-steps.forEach(function(e) {
-  level -= e.height;
-  let c = level;
-  animation = animation
-    .delay(e.delay + 300)
-    .queue(function(next) {
-        slide.css('transform', translateY(c));
-        next();
-    });
-});
+// var height = $(slide).height();
+
+// var translateY = function(value) {
+//     return 'translateY(' + value + 'px)';
+// }
+
+// slide.css('transform', translateY(height));
+// slide.css('visibility', 'visible');
+
+// var steps = [];
+
+// slide.children().each(function() {
+//   steps.push({
+//     height: $(this).height(),
+//     delay: $(this).data('delay')
+//   });
+// });
+
+// var animation = $(slide);
+// var level = height;
+// steps.forEach(function(e) {
+//   level -= e.height;
+//   let c = level;
+//   animation = animation
+//     .delay(e.delay + 300)
+//     .queue(function(next) {
+//         slide.css('transform', translateY(c));
+//         next();
+//     });
+// });
 
 $('.nav-toggle a').first().on('click', function(e) {
   e.preventDefault();
