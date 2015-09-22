@@ -95,12 +95,12 @@
         }
 
         li, span, #typed-strings {
-          @include adjust-font-size-to(ms(12), 3);
+          @include adjust-font-size-to(ms(10), 3);
         }
         span, #typed-strings {
           font-family: 'Oxygen', sans-serif;
           text-transform: none;
-          @include adjust-font-size-to(ms(10), 3);
+          @include adjust-font-size-to(ms(8.5), 3);
 
           p {
             margin-bottom: 0;
