@@ -3,6 +3,7 @@
   $gradient: linear-gradient($darken, $darken);
 
     #tools {
+        margin-top: 3.5em;
         color: #fff;
         // @include background(url('../images/pattern.png'));
         position: relative;
@@ -12,10 +13,12 @@
         padding: 0;
 
         header h3 span {
-            color: #999;
+/*            color: #999;*/
+            color: #eeeeee;
 
             em {
-                color: #f38632;
+/*                color: #f38632;*/
+                color: #eeeeee;
             }
         }
 

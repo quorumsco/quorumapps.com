@@ -8,8 +8,8 @@
     box-sizing: border-box;
 
     .container {
-        padding-top: 10%;
-/*      overflow: hidden;*/
+        padding-top: 5%;
+        overflow: hidden;
     }
 
     hr {
@@ -23,7 +23,6 @@
 
     li, span, #typed-strings {
       text-align: center;
-      font-family: 'Raleway', sans-serif;
       @include adjust-font-size-to(ms(6), 1.5);
       font-weight: 800; 
       color: rgba(#fff, 1);
@@ -33,19 +32,28 @@
         color: #fff;
         font-style: normal;
       }
+    }
+
+    li {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    span, #typed-strings {
+      text-transform: none;
+      font-family: 'Oxygen', sans-serif;
+      @include adjust-font-size-to(ms(5), 1.5);
+      color: #fff;
 
       p {
         text-align: center;
       }
     }
-    span {
-      font-family: 'Oxygen', sans-serif;
-      @include adjust-font-size-to(ms(5), 1.5);
-      color: #fff;
-    }
     li.subtitle {
       font-family: 'Oxygen', sans-serif;
       @include adjust-font-size-to(ms(4), 1);
+    }
+    li.arrow {
+      display: none;
     }
   }
 
@@ -81,19 +89,35 @@
         height: 100vh;
         padding-top: ($nav-height + 1.5) * $base-line-height;
 
-        li, span, #typed-strings {
-          @include adjust-font-size-to(ms(14), 3);
+        .container {
+            padding-top: 10%;
+            overflow: hidden;
         }
-        span {
+
+        li, span, #typed-strings {
+          @include adjust-font-size-to(ms(12), 3);
+        }
+        span, #typed-strings {
           font-family: 'Oxygen', sans-serif;
           text-transform: none;
-          @include adjust-font-size-to(ms(12), 3); 
+          @include adjust-font-size-to(ms(10), 3);
+
+          p {
+            margin-bottom: 0;
+          }
         }
         li.subtitle {
           font-family: 'Oxygen', sans-serif;
-          margin-top: 0.7em;
+          margin-top: 0.2em;
           text-transform: none;
-          @include adjust-font-size-to(ms(9), 2);
+          @include adjust-font-size-to(ms(7), 2);
+        }
+        li.arrow {
+          margin: auto;
+          display: block;
+          position: relative;
+          top: 2.2em;
+          width: 2%;
         }
     }
   }

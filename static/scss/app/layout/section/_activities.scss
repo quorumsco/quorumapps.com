@@ -18,7 +18,7 @@
 
         h4 {
           @include adjust-font-size-to(ms(1));
-          color: #4962AD;
+/*          color: #4962AD;*/
           color: #000;
         }
 
@@ -26,7 +26,8 @@
           @include adjust-font-size-to(ms(3), 1);
 
           i {
-              color: #4962AD;
+/*              color: #4962AD;*/
+              color: #ff5f45;
           }
         }
 

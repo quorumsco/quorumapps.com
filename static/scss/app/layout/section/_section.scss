@@ -10,6 +10,12 @@ $header-line-height: 1.5;
       margin: 0 0 3em;
     }
 
+    header hr {
+      margin: 1% 48% 0 48%;
+/*      border-bottom: 1px solid #ff5f45;*/
+      border-bottom: 1px solid #bbbbbb;
+    }
+
     header h3 {
       font-family: 'Ubuntu', sans-serif;
       text-align: center;
@@ -21,11 +27,12 @@ $header-line-height: 1.5;
         @include adjust-font-size-to($header-font-size, $header-line-height);
         color: lighten(#000, 60%);
         position: relative;
-        color: #999;
-
+/*        color: #999;*/
+        color: #4241c5;
         em {
           font-style: normal;
-          color: #f38632;
+/*          color: #f38632;*/
+          color: #4241c5;
         }
       }
 

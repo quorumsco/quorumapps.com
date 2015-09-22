@@ -4,9 +4,11 @@
             display: block;
             text-align: center;
             background-color: #fff;
-            color: #4962AD;
+/*            color: #4962AD;*/
+            color: #ff5f45;
             border-radius: 3px;
-            border: 1px solid #4962AD;
+/*            border: 1px solid #4962AD;*/
+            border: 1px solid #ff5f45;
             margin-top: 1em;
             @include adjust-font-size-to(ms(0), 1.4);
 
@@ -19,10 +21,10 @@
 
             &:hover {
                 color: #fff;
-                background-color: #4962AD;
+                background-color: #ff5f45;
 
                 span:before {
-                    border-color: lighten(#222, 20%);
+                    border-color: #fff;
                 }
             }
         }

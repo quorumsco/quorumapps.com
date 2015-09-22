@@ -8,7 +8,7 @@ $nav-border-color: rgba(#000, .2);
     background-color: #ffffff;
     z-index: 5;
     padding: 0 1em;
-    height: 2*$base-line-height;
+    // height: 2*$base-line-height;
 
     &.scrolled {
       background-color: rgba(darken(#fff, 4%), .85);
@@ -112,12 +112,14 @@ $nav-border-color: rgba(#000, .2);
       }
 
       .main-links {
+        font-size: 1.2em;
         li {
           margin-left: 1em;
         }
       }
 
       .social-links {
+        font-size: 1.2em;
         margin-left: 1em;
 
         a {
@@ -135,12 +137,17 @@ $nav-border-color: rgba(#000, .2);
 
           i[class^='icon-'] {
             position: relative;
-            top: 1px;
+            top: -3px;
+          }
+
+          i {
+            position: relative;
+            top: -5px; 
           }
 
           img {
             position: relative;
-            top: 2px;
+            top: -3px;
             width: 1.28571429em;
           }
 
