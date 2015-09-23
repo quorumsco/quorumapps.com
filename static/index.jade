@@ -52,10 +52,12 @@ html
                 i.fa.fa-fw.fa-envelope-o
             li
               a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
-                img(src='images/english.jpg' alt='English')
-            li
+                i.lang en
+                //- img(src='images/english.jpg' alt='English')
+            li 
               a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
-                img(src='images/french.jpg' alt='Français')
+                i.lang fr
+                //- img(src='images/french.jpg' alt='Français')
     header#home
       .container(lang="fr")
         ul
@@ -63,6 +65,7 @@ html
           hr
           span#slide
           div(id="typed-strings")
+            p <em>Piloter</em> sa campagne
             p <em>Optimiser</em> les politiques publiques
             p <em>Amplifier</em> son action
             p <em>Dynamiser</em> son mouvement
@@ -101,6 +104,7 @@ html
             h3
               span Who #[em we are]
               hr
+            p #[strong Quorum, the data agency for big ideas]
             p #[strong We build web and mobile apps and] provide technology to help our clients build #[strong meaningful], #[strong people-centered], and #[strong data driven] actions, that achieve their strategic goals and make a #[strong change].
           .content
             .description
@@ -239,7 +243,7 @@ html
               h3
                 span Des outils #[em opérationnels]
                 hr
-              p Quorum, c’est une application web et mobile intuitive, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
+              p Quorum développe des applications web et mobile intuitives, qui avec le support permanent de notre équipe, vous permettent d'améliorer votre impact.
             ul.content
               .row
                 li
@@ -397,6 +401,7 @@ html
             h3
               span Notre #[em équipe]
               hr
+            p #[strong LA DATA AGENCY]
             p Développeurs, politologues, data analystes, UX designer, avocats spécialisés en droit des collectivités et référent CNIL.
           .content
             .contact
@@ -462,7 +467,7 @@ html
           h3
             img(src='images/quorumapps.png' alt='Quorum')
           .about
-            p En utilisant la plateforme Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
+            p En utilisant Quorum, vous contribuez à optimiser vos actions et vos ressources pour être plus impactant et créer un nouveau lien avec votre public.
             p De meilleures technologies pour de meilleures actions.
           .ask-study
             a.button(href='mailto:info@quorumapps.com') Demander une étude personalisée
