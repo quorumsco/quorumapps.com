@@ -1,4 +1,4 @@
-$header-font-size: ms(4);
+$header-font-size: ms(6);
 $header-line-height: 1.5;
 
 @include exports('section') {
@@ -28,11 +28,11 @@ $header-line-height: 1.5;
         color: lighten(#000, 60%);
         position: relative;
 /*        color: #999;*/
-        color: #4241c5;
+        color: #222;
         em {
           font-style: normal;
 /*          color: #f38632;*/
-          color: #4241c5;
+          color: #222;
         }
       }
 

@@ -1,6 +1,6 @@
 @include exports('header') {
   #home {
-    background-image: url('../images/back.jpg');
+    //background-image: url('../images/back.jpg');
     background-size: cover;
     background-position: center center;
     padding: 1em;
@@ -24,18 +24,19 @@
     li, span, #typed-strings {
       text-align: center;
       @include adjust-font-size-to(ms(6), 1.5);
-      font-weight: 800; 
+      font-weight: 800;
       color: rgba(#fff, 1);
       text-transform: uppercase;
 
       em {
-        color: #fff;
+        color: #4A4A4A;
         font-style: normal;
       }
     }
 
     li {
       font-family: 'Raleway', sans-serif;
+      color: #4A4A4A;
     }
 
     span, #typed-strings {
@@ -62,7 +63,7 @@
     transform: translateY(100%);
     visibility: hidden;*/
   }
-  
+
   .typed-cursor {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;

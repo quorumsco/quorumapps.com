@@ -22,9 +22,9 @@ var navbar = document.getElementById('nav');
 window.addEventListener("optimizedScroll", function() {
   var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
   if (scrollTop > 0) {
-    navbar.classList.add('scrolled');
+    navbar.classList.add('scrolled', 'font-scrolled');
   } else {
-    navbar.classList.remove('scrolled');
+    navbar.classList.remove('scrolled', 'font-scrolled');
   }
 });
 

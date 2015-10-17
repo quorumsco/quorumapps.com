@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Labs - Quorum
+    meta(name='description' content='Quorum')
+    meta(name='keywords' content='quorum')
+    meta(name='author' content='Douézan-Grard Guillaume - Quorum')
+    link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
+    link(rel='stylesheet' href='stylesheets/app.css')
+  body.fr
+    nav#nav
+      .container
+        h1.nav-brand
+          a(href='/')
+            img(src='images/quorum-logo.png' alt='Quorum')
+        .nav-toggle
+          a(href='#')
+            i.fa.fa-fw.fa-bars
+        .nav-links
+          ul.main-links
+            li
+              a(href='/company.html' lang="fr") Offre
+              a(href='/company.html' lang="en") What we do
+            li
+              a(href='/labs.html' lang="fr") Labs
+              a(href='/labs.html' lang="en") Labs
+            li
+              a(href='/team.html' lang="fr") Équipe
+              a(href='/team.html' lang="en") Team
+            li
+              a(href='//blog.quorumapps.com') Blog
+          ul.social-links
+            li
+              a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
+                i.lang en
+                //- img(src='images/english.jpg' alt='English')
+            li
+              a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
+                i.lang fr
+                //- img(src='images/french.jpg' alt='Français')

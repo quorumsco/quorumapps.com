@@ -1,0 +1,27 @@
+@include exports('mission') {
+
+  #mission .content {
+    p, ul {
+      font-size: 1.25em;
+      line-height: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    ul {
+      list-style: inside;
+    }
+  }
+
+  @include susy-media($medium-screen) {
+    #mission .content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #mission .content p {
+      font-size: 1.25em;
+      line-height: 1.5em;
+      margin-bottom: 1.5em;
+    }
+  }
+}

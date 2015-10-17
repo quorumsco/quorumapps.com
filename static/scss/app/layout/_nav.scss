@@ -1,17 +1,23 @@
 $nav-height: 2;
 $nav-border-color: rgba(#000, .2);
+$nav-scrolled: #222;
+$font-scrolled: rgba(255, 255, 255, 1);
 
 @include exports('nav') {
   #nav {
     @include position(fixed, 0 0 auto 0);
     @include clearfix;
-    background-color: #ffffff;
+    background-color: transparent;
     z-index: 5;
     padding: 0 1em;
-    // height: 2*$base-line-height;
+    height: 3*$base-line-height;
+    line-height: 3*$base-line-height;
 
     &.scrolled {
-      background-color: rgba(darken(#fff, 4%), .85);
+      background-color: $nav-scrolled;
+      a{
+        color: $font-scrolled;
+      }
     }
 
     h1 {
@@ -25,12 +31,13 @@ $nav-border-color: rgba(#000, .2);
     }
 
     a {
+      font-family: 'Ubuntu';
+      text-transform: uppercase;
       color: lighten(#000, 50%);
 /*      text-transform: uppercase;*/
 
-      &:hover,
-      &.active {
-        color: #4741c5;
+      &:hover {
+        color: #a1a4a7;
       }
     }
   }
@@ -51,7 +58,7 @@ $nav-border-color: rgba(#000, .2);
 
   #nav.show-menu {
     background-color: rgba(darken(#fff, 4%), .85);
- 
+
     .social-links {
       li {
         display: inline-block;
@@ -65,10 +72,10 @@ $nav-border-color: rgba(#000, .2);
 
     .nav-links {
       display: block;
+      line-height: 3*$base-line-height;
 
       img {
         position: relative;
-        width: 1.28571429em;
       }
 
       a {
@@ -106,7 +113,7 @@ $nav-border-color: rgba(#000, .2);
       .social-links,
       .main-links li,
       .social-links li {
-        height: 2*$base-line-height;
+        height: 3*$base-line-height;
         display: inline-block;
         vertical-align: top;
       }
@@ -118,23 +125,24 @@ $nav-border-color: rgba(#000, .2);
       .main-links {
         font-size: 1.2em;
         li {
-          margin-left: 1em;
+          margin-left: 2em;
         }
       }
 
       .social-links {
         font-size: 1.2em;
-        margin-left: 1em;
+        margin-left: 2em;;
 
         a {
           @include adjust-font-size-to(ms(1.7), 2);
           display: inline-block;
-          height: 2*$base-line-height;
-          vertical-align: top;
+          height: 3*$base-line-height;
+          line-height: 3*$base-line-height;
         }
 
         li {
           margin-left: 1em;
+
           &:nth-child(6) {
             margin-left: 0;
           }
@@ -146,13 +154,15 @@ $nav-border-color: rgba(#000, .2);
 
           i {
             position: relative;
-            top: -5px; 
+            top: -5px;
           }
 
           img {
             position: relative;
-            top: -3px;
-            width: 1.28571429em;
+            top: 5px;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
           }
 
           &:nth-child(3):after {
@@ -171,8 +181,8 @@ $nav-border-color: rgba(#000, .2);
 
       .main-links li,
       .social-links li {
-        height: 2*$base-line-height;
-        line-height: 2*$base-line-height;
+        height: 3*$base-line-height;
+        line-height: 3*$base-line-height;
       }
 
       .nav-toggle {
