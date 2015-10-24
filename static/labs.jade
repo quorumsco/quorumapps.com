@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Labs - Quorum
+    title Company - Quorum
     meta(name='description' content='Quorum')
     meta(name='keywords' content='quorum')
     meta(name='author' content='Douézan-Grard Guillaume - Quorum')
@@ -13,33 +13,69 @@ html
     link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
-    nav#nav
-      .container
-        h1.nav-brand
-          a(href='/')
-            img(src='images/quorum-logo.png' alt='Quorum')
-        .nav-toggle
-          a(href='#')
-            i.fa.fa-fw.fa-bars
-        .nav-links
-          ul.main-links
-            li
-              a(href='/company.html' lang="fr") Offre
-              a(href='/company.html' lang="en") What we do
-            li
-              a(href='/labs.html' lang="fr") Labs
-              a(href='/labs.html' lang="en") Labs
-            li
-              a(href='/team.html' lang="fr") Équipe
-              a(href='/team.html' lang="en") Team
-            li
-              a(href='//blog.quorumapps.com') Blog
-          ul.social-links
-            li
-              a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
-                i.lang en
-                //- img(src='images/english.jpg' alt='English')
-            li
-              a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
-                i.lang fr
-                //- img(src='images/french.jpg' alt='Français')
+    include includes/nav.jade
+    header#page
+      .container(lang="fr")
+        ul
+          li Living Lab
+          hr
+        .quote
+          p Un living lab est un laboratoire d’innovation ouverte. Nous partons des besoins du terrain pour trouver de nouveaux moyens d’améliorer l’action.
+      .container(lang="en")
+        ul
+          li Living Lab
+          hr
+        .quote A living lab is a research concept. A living lab is a user-centred, open-innovation ecosystem, often operating in a territorial context (e.g. city, agglomeration, region), integrating concurrent research and innovation processes within a public-private-people partnership.
+    main
+      section#experiments
+        .container(lang="fr")
+          .content
+            .experiment
+              .experiment-description
+                span.title Élections départementales 2015
+                p.project Créer de engagement : Data prédictive, logistique, cartographie, gestion de proximité
+                .used-skills
+                  ul
+                    li.skill-strategy Stratégies Adaptées
+                    li.skill-tools Outils Intuitifs
+                    li.skill-info Remontée d’information
+                    li.skill-impact Mesurer l’impact
+                    li.skill-engagement Créer du lien
+                    li.skill-organisation Renforcer son organisation
+              .experiment-thumbnail
+                img(src='images/labs/elections.jpg')
+            .experiment
+              .experiment-description
+                span.title Mastering Data on Twitter
+                p.project Analyser les réseaux sociaux en temps reel à partir d’un mot clé. Mesurer l’évolution et les mots clés associés.
+                .used-skills
+                  ul
+                    li.skill-strategy Stratégies Adaptées
+                    li.skill-info Remontée d’information
+              .experiment-thumbnail
+                img(src='images/labs/twitter.jpg')
+            .experiment
+              .experiment-description
+                span.title CIVISENS – Améliorer la mobilisation citoyenne
+                p.project Notre application web accompagnent les collectivités pour lutter contre la non ou la mal inscription sur les listes électorales, et ainsi faciliter la gestion des enjeux démocratiques, démographiques et logistiques auxquels les collectivités doivent faire face.
+                .used-skills
+                  ul
+                    li.skill-strategy Stratégies Adaptées
+                    li.skill-tools Outils Intuitifs
+                    li.skill-info Remontée d’information
+                    li.skill-impact Mesurer l’impact
+              .experiment-thumbnail
+                img(src='images/labs/civisen.jpg')
+        .container(lang="en")
+          .content
+      section#cta.page
+        .container(lang="fr")
+          .content
+            a.cta(href='/contact.html')
+              span Demander une étude personnalisée
+        .container(lang="en")
+          .content
+            a.cta(href='/contact.html')
+              span Get in touch
+    include includes/footer.jade
+    include includes/js.jade

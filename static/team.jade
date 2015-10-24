@@ -13,33 +13,64 @@ html
     link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
-    nav#nav
-      .container
-        h1.nav-brand
-          a(href='/')
-            img(src='images/quorum-logo.png' alt='Quorum')
-        .nav-toggle
-          a(href='#')
-            i.fa.fa-fw.fa-bars
-        .nav-links
-          ul.main-links
-            li
-              a(href='/company.html' lang="fr") Offre
-              a(href='/company.html' lang="en") What we do
-            li
-              a(href='/labs.html' lang="fr") Labs
-              a(href='/labs.html' lang="en") Labs
-            li
-              a(href='/team.html' lang="fr") Équipe
-              a(href='/team.html' lang="en") Team
-            li
-              a(href='//blog.quorumapps.com') Blog
-          ul.social-links
-            li
-              a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
-                i.lang en
-                //- img(src='images/english.jpg' alt='English')
-            li
-              a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
-                i.lang fr
-                //- img(src='images/french.jpg' alt='Français')
+    include includes/nav.jade
+    header#page
+      .container(lang="fr")
+        ul
+          li La Data Agency
+          hr
+        .quote
+          p Nous croyons en la connexion des intelligences, des savoirs et des experiences.
+      .container(lang="en")
+        ul
+          li The Data Agency
+          hr
+        .quote
+          p We believe in collective intelligence. we are assembling a team of passionate, creative people that strive to apply cutting edge research to real-world problems.
+    main
+      section#team
+        .container(lang="fr")
+          .content
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span.job-title Data Analysts & Data Scientists
+                p.job-details Collecter les données, les nettoyer, en tirer l’intelligence.
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span.job-title Sciences Sociales/Cognitives
+                p.job-details Recherche en Sciences sociales, politiques et sciences cognitive, etude de terrain.
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span.job-title Developpeurs
+                p.job-details Rendre disponible nos recherches dans des interfaces intuitives, accessibles et prêtes à l’action concrete.
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span.job-title Communication
+                p.job-details Communiquer sur ce que la technologie est aujourd’hui capable de faire pour améliorer la société.
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span.job-title Juridique
+                p.job-details Protéger  les données personnelles et données sensibles. Pour toute question juridique : cil@quorumimpact.com
+        .container(lang="en")
+          .content
+      section#cta.page
+        .container(lang="fr")
+          .content
+            a.cta(href='//blog.quorumapps.com')
+              span Notre blog
+        .container(lang="en")
+          .content
+            a.cta(href='//blog.quorumapps.com')
+              span Our blog
+    include includes/footer.jade
+    include includes/js.jade

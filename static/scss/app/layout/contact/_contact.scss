@@ -1,0 +1,8 @@
+@include exports('contact') {
+  #contact {
+
+    @include susy-media($medium-screen) {
+
+    }
+  }
+}

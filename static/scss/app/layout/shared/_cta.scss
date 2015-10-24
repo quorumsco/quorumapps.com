@@ -1,0 +1,57 @@
+@include exports('cta') {
+  #cta {
+    position: relative;
+    height: 150px;
+    text-align: center;
+    padding: 1em 0 2em 0;
+
+    a { z-index: 5; }
+
+    .content {
+      height: 150px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cta {
+      position: relative;
+      box-sizing: border-box;
+      height: 60px;
+      line-height: 60px;
+      color: #fff;
+      //background-color: #6c59b4;
+      background-color: $cta-color;
+      padding: 0px 50px;
+      overflow: hidden;
+      border: 1px solid #ff725b;
+      border-radius: 3px;
+
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $cta-color-hover;
+        border-color: $cta-color-border;
+      }
+
+      span {
+        text-transform: uppercase;
+        font-size: 1.4em;
+        font-family: 'Ubuntu', sans-serif;
+      }
+    }
+
+    @include susy-media($medium-screen) {
+      #cta .content {
+        @include container;
+      }
+    }
+  }
+
+  .page { background-color: #fbfbfb; }
+}

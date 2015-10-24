@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Company - Quorum
+    meta(name='description' content='Quorum')
+    meta(name='keywords' content='quorum')
+    meta(name='author' content='Douézan-Grard Guillaume - Quorum')
+    link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
+    link(rel='stylesheet' href='stylesheets/app.css')
+  body.fr
+    include includes/nav.jade
+    header#page
+      .container(lang="fr")
+        ul
+          li Contact
+          hr
+      .container(lang="en")
+        ul
+          li Contact
+          hr
+    main
+      section#skills
+        form(action="//formspree.io/info@quorumapps.com" method="POST")
+            input(type="text" name="name")
+            input(type="email" name="_replyto")
+            input(type="submit" value="Send")
+    include includes/footer.jade
+    include includes/js.jade

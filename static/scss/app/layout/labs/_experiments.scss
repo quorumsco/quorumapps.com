@@ -1,0 +1,146 @@
+@include exports('experiments') {
+  #experiments {
+    padding: 4em;
+
+    .experiment {
+      height: 100%;
+
+      &:hover {
+        .experiment-thumbnail {
+          img {
+            opacity: 0.9;
+            -webkit-transform: scale3d(1.2, 1.2, 1);
+            transform: scale3d(1.2, 1.2, 1);
+          }
+        }
+      }
+
+      .experiment-description {
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #fbfbfb;
+        color: #6F6F6F;
+
+        .title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          font-size: 1.1em;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+
+        .project {
+          margin: 10px 0 20px 0;
+        }
+
+        li {
+          position: relative;
+          padding-left: 35px;
+          box-sizing: border-box;
+          text-transform: uppercase;
+          font-size: 0.75em;
+        }
+
+        .skill-strategy,
+        .skill-tools,
+        .skill-info,
+        .skill-impact,
+        .skill-engagement,
+        .skill-organisation {
+          &:before {
+            position: absolute;
+            background-size: 25px 25px;
+            background-position: top left;
+            background-repeat: no-repeat;
+            content: '';
+            z-index: 10;
+            width: 25px;
+            height: 25px;
+            left: 0px;
+            top: 0px;
+          }
+        }
+
+        .skill-strategy { &:before { background-image: url('../images/labs/strategy.svg');} }
+        .skill-tools { &:before { background-image: url('../images/labs/tools.svg');} }
+        .skill-info { &:before { background-image: url('../images/labs/info.svg');} }
+        .skill-impact { &:before { background-image: url('../images/labs/impact.svg');} }
+        .skill-engagement { &:before { background-image: url('../images/labs/engagement.svg');} }
+        .skill-organisation { &:before { background-image: url('../images/labs/organisation.svg');} }
+      }
+
+
+
+      .experiment-thumbnail {
+        overflow: hidden;
+
+        img {
+          opacity: 0.6;
+          background-color: #fff;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+          @include transition(all, .5s, cubic-bezier(0.7, 0, 0.3, 1));
+        }
+      }
+    }
+
+    @include susy-media($medium-screen) {
+      .experiment:nth-of-type(even) {
+        .experiment-description {
+          float: left;
+
+          &:after {
+            position: absolute;
+            z-index: 10;
+            content: "";
+            width: 0;
+            height: 0;
+            right: -17px;
+            top: 10px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid #fbfbfb;
+          }
+        }
+      }
+
+      .experiment:nth-of-type(odd) {
+        .experiment-description {
+          float: right;
+
+          &:after {
+            position: absolute;
+            z-index: 10;
+            content: "";
+            width: 0;
+            height: 0;
+            left: -20px;
+            top: 10px;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-right: 20px solid #fbfbfb;
+          }
+        }
+      }
+
+      .experiment {
+        .experiment-thumbnail, .experiment-description {
+          position: relative;
+          @include span(2 of 4);
+          width: 50%;
+          margin: 0;
+          height: 333px;
+        }
+        .experiment-description {
+          .used-skills {
+            li {
+              @include span(2 of 4);
+              width: 50%;
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

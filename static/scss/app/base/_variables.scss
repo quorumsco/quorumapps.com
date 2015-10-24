@@ -1,6 +1,7 @@
 // Typography
-$base-font-family: $helvetica !default;
-$heading-font-family: $base-font-family;
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Raleway', sans-serif;
+$font-quote: 'Lora', serif;
 
 // Font Sizes
 $base-font-size: 15px;
@@ -23,7 +24,10 @@ $base-z-index: 0;
 $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
-$light-gray: #ddd;
+$light-gray: #fbfbfb;
+$cta-color: #FF6600;
+$cta-color-hover: #fd9c8c;
+$cta-color-border: #ff725b;
 
 // Font Colors
 $base-background-color: #fff;

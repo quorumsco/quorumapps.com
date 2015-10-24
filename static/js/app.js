@@ -29,7 +29,7 @@ window.addEventListener("optimizedScroll", function() {
 });
 
 // Footer particles animation
-particlesJS('footer', {
+particlesJS('header', {
   "particles": {
     "number": {
       "value": 150,

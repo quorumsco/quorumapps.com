@@ -14,47 +14,14 @@ html
     link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700')
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
-    nav#nav
-      .container
-        h1.nav-brand
-          a(href='/')
-            img(src='images/quorum-logo.png' alt='Quorum')
-        .nav-toggle
-          a(href='#')
-            i.fa.fa-fw.fa-bars
-        .nav-links
-          ul.main-links
-            li
-              a(href='/company.html' lang="fr") Offre
-              a(href='/company.html' lang="en") What we do
-            li
-              a(href='/labs.html' lang="fr") Labs
-              a(href='/labs.html' lang="en") Labs
-            li
-              a(href='/team.html' lang="fr") Équipe
-              a(href='/team.html' lang="en") Team
-            li
-              a(href='//blog.quorumapps.com') Blog
-          ul.social-links
-            li
-              a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
-                //-i.lang en
-                img(src='images/english.jpg' alt='English')
-            li
-              a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
-                //-i.lang fr
-                img(src='images/french.jpg' alt='Français')
+    include includes/nav.jade
     header#home
       .container(lang="fr")
         ul
-          li We use #[em data & technology] to make #[em big ideas happen].
+          li We use data & technology to make big ideas happen.
       .container(lang="en")
         ul
-          li We use #[em data & technology] to make #[em big ideas happen].
-      ul
-        li.arrow
-          a(href='#who-are-we')
-            img(src='images/arrow.png')
+          li We use data & technology to make big ideas happen.
     main
       section#mission
         .container(lang="fr")
@@ -63,170 +30,143 @@ html
               span Notre #[em mission]
               hr
           .content
-            p Les nouvelles technologies, l'Open Data, le Big Data, ses algotithmes et ses quants ont envahi le secteur marchant, de la finance, de la logistique. Nous pensons que la Data Intelligence peut aussi servir à l'action civique - l'action d'une ONG, d'une collectivité, d'un mouvement, ou d'une campagne électorale.
-            p Nous avons créé Quorum; des interfaces web et mobiles, qui utilisent le pouvoir analytique et logistique des Nouvelles Technologies, et les rendent disponibles à des objectifs civiques et des applications concretes.
-            ul
-              li Cartographie décisionnelle, mesure d'impact, live tracking
-              li Applications web et mobiles d'acquisition de données
-              li Valorisation de la donnée disponible (Open Data)
-              li Data prédictive et logistique
-            p Nous pensons que la technologie peut augmenter les capacités d'une organisation et des individus pour qu'ils se focalisent sur l'essentiel : leurs idées et leurs actions.
+            p Quorum Impact est l’une des premières start up de civic-tech en Europe. Nous mettons les technologies au service de l’amélioration de la société et de l’action publique.
+            p Nous avons vu comment la Data Intelligence, les algorythmes, le Big data et les nouvelles technologies ont transformé à grande échelle le secteur financier, marchand ou logistique.
+            p Nous pensons que la technologie peut aussi aider à la résolution de problématiques civiques et citoyennes;  et ainsi aider l’action d’une ONG, d’une collectivité, un mouvement ou une campagne à être plus impactant, plus efficace et réinventer leur relation avec le public.
+            p Nous avons crée Quorum Impact, des interfaces web et mobiles, qui utilisent le pouvoir analytique et logistique des nouvelles technologies et les appliquent à des objectifs civiques et concrets.
+            p Car nous pensons que la technologie peut d’augmenter la capacité des organisations et des individus,  pour qu’ils se focalisent sur l’essentiel : leurs idées et leurs actions.
         .container(lang="en")
           header
             h3
               span Our #[em mission]
               hr
-            p build web and mobile apps and provide technology to help our clients build meaningful, people- centered, and data driven actions, that achieve their strategic goals and make a change.
-            p We rely on data to drive decisions and constantly look for new ways to solve problems.
-            p We design our apps based on the latest research in political and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
-            p Smart campaigns, smart actions and causes will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
           .content
             .description
-              p We rely on data to drive decisions and constantly look for new ways to #[strong solve problems].
-              p We design our apps based on the latest research in politial and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
-              p Smart #[strong campaigns], smart #[strong actions] and #[strong causes] will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
-              p
-            .mockup
-              img(src='images/mockup.png' alt='Product mockup')
-
+              p Quorum Impact is a civic-tech start-up; a start-up inventing new tools to empower actions.
+              p We build web and mobile apps and provide technology to help our clients build meaningful, people-centered, and data driven actions, that achieve their strategic goals and make a change.
+              p We rely on data to drive decisions and constantly look for new ways to solve problems.
+              p We design our apps based on the latest research in political and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
+              p Smart campaigns, smart actions and causes will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
       section#we-follow
         .container(lang="fr")
           header
             h3
-              span Nous #[em accompagnons]
+              span Pour #[em qui ?]
               hr
           ul.content
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-town
-                h4 Collectivités territoriales
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-society
-                h4 ONG &amp; Associations
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-vote
-                h4 Candidats aux élections
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-megaphone
-                h4 Leaders d'influence
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-right
+                  .who
+                    .icon
+                      i.icon-town
+                    h4 Collectivités territoriales
+                .followed-bloc
+                  img(src='images/home/administrations.jpg')
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-right
+                  .who
+                    .icon
+                      i.icon-society
+                    h4 ONG &amp; Associations
+                .followed-bloc
+                  img(src='images/home/nonprofits.jpg')
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-left
+                  img(src='images/home/elections.jpg')
+                .followed-bloc
+                  .who
+                    .icon
+                      i.icon-vote
+                    h4 Candidats aux élections
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-left
+                  img(src='images/home/leaders.jpg')
+                .followed-bloc
+                  .who
+                    .icon
+                      i.icon-megaphone
+                    h4 Leaders d'influence
         .container(lang="en")
           header
             h3
               span Our #[em clients]
               hr
           ul.content
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-town
-                h4 Public Administration
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-society
-                h4 Nonprofits
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-vote
-                h4 Politics & Campaigners
-            li
-              a(href='mailto:info@quorumapps.com')
-                .icon
-                  i.icon-megaphone
-                h4 Advocacy
-
-      section#team
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-right
+                  .who
+                    .icon
+                      i.icon-town
+                    h4 Public Administration
+                .followed-bloc
+                  img(src='images/home/administrations.jpg')
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-right
+                  .who
+                    .icon
+                      i.icon-society
+                    h4 Nonprofits
+                .followed-bloc
+                  img(src='images/home/nonprofits.jpg')
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-left
+                  img(src='images/home/elections.jpg')
+                .followed-bloc
+                  .who
+                    .icon
+                      i.icon-vote
+                    h4 Politics & Campaigners
+            li.item-follow
+              a(href='/contact.html')
+                .followed-bloc.arrow-left
+                  img(src='images/home/leaders.jpg')
+                .followed-bloc
+                  .who
+                    .icon
+                      i.icon-megaphone
+                    h4 Advocacy
+      section#cta
         .container(lang="fr")
-          header
-            h3
-              span Découvrez nos offres
-              hr
-        .container(lang="en")
-          header
-            h3
-              span Know more
-              hr
           .content
-            .contact
-              h4 We'd like to hear from you ! Get in touch
-              p
-                a(href='mailto:info@quorumapps.com')
-                  i.fa.fa-fw.fa-envelope-o
-            .social
-              h4 Follow us
-              p
-                a(href='//facebook.com/pages/Quorum/691793700953234')
-                  i.icon-facebook
-                a(href='//twitter.com/quorumapps')
-                  i.icon-twitter
-                a(href='//www.linkedin.com/company/10114882')
-                  i.icon-linkedin
-                a(href='//google.com/+Quorumappsdata')
-                  i.icon-google
-          .subscribe
-            h4 Get updates :
-            .form
-              .form-submit
-                a.button(href='#')
-                  i.fa.fa-fw.fa-pencil
-                  span Subscribe
-              .form-input
-                input(type='text' placeholder='Email')
-    footer#footer
-      .container(lang="fr")
-        .copyright
-          p &copy; Quorum 2015
-        .pages
-          h3 Plan du site
-          ul
-            li
-              a(href='/mentions-legales.pdf' target='_blank') Mentions légales
-            li
-              a(href='https://blog.quorumapps.com/logo/') Notre logo
-            li
-              a(href='#home') Accueil
-          .social-links
-            h3 Plan du site
-            ul
-              li
-                a(href='/mentions-legales.pdf' target='_blank') Mentions légales
-              li
-                a(href='https://blog.quorumapps.com/logo/') Notre logo
-              li
-                a(href='#home') Accueil
-      .container(lang="en")
-        .copyright
-          p &copy; Quorum 2015
-        .pages
-          h3 Plan du site
-          ul
-            li
-              a(href='/mentions-legales.pdf' target='_blank') Mentions légales
-            li
-              a(href='https://blog.quorumapps.com/logo/') Notre logo
-            li
-              a(href='#home') Accueil
-          .social-links
-            h3 Plan du site
-            ul
-              li
-                a(href='/mentions-legales.pdf' target='_blank') Mentions légales
-              li
-                a(href='https://blog.quorumapps.com/logo/') Notre logo
-              li
-                a(href='#home') Accueil
-    script(src='//code.jquery.com/jquery-2.1.4.min.js')
-    script(src='javascripts/TweenMax.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js')
-    script(src='javascripts/plugins/animation.gsap.js')
-    script(src="javascripts/typed.js")
-    script(src='javascripts/particles.min.js')
-    script(src='javascripts/app.js')
+            a.cta(href='/offer.html')
+              span Découvrez nos offres
+        .container(lang="en")
+          .content
+            a.cta(href='/offer.html')
+              span What we do
+      section#newsletter
+        .container(lang="fr")
+          .content
+            span.signup Inscrivez-vous pour recevoir notre actualité
+            #mc_embed_signup
+              form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                #mc_embed_signup_scroll
+                .mc-field-group
+                  input(type="email" value="" name="EMAIL" placeholder="john@goe.com" class="required email" id="mce-EMAIL")
+                #mce-responses.clear
+                  #mce-error-response.response(style="display:none")
+                  #mce-success-response.response(style="display:none")
+                  input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
+                  input(type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button")
+        .container(lang="en")
+          .content
+            span.signup Get updates
+            #mc_embed_signup
+              form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
+                #mc_embed_signup_scroll
+                .mc-field-group
+                  input(type="email" value="" name="EMAIL" placeholder="john@goe.com" class="required email" id="mce-EMAIL")
+                #mce-responses.clear
+                  #mce-error-response.response(style="display:none")
+                  #mce-success-response.response(style="display:none")
+                  input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
+                  input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
+    include includes/footer.jade
+    include includes/js.jade
