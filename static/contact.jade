@@ -4,33 +4,28 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Company - Quorum
+    title Contact - Quorum
     meta(name='description' content='Quorum')
     meta(name='keywords' content='quorum')
     meta(name='author' content='Douézan-Grard Guillaume - Quorum')
     link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
     link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
     link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
     include includes/nav.jade
     header#page
-      .container(lang="fr")
+      .container
         ul
-          li Nous contacter
+          li(lang="fr") Nous contacter
+          li(lang="en") Get in touch
           hr
         .quote
-          p Idées. Étude personnalisée. Nous rejoindre.
-      .container(lang="en")
-        ul
-          li Get in touch
-          hr
-        .quote
-          p We'd like to hear from you!
+          p(lang="fr") Idées. Étude personnalisée. Nous rejoindre.
+          p(lang="en") We'd like to hear from you!
     main
       section#contact
-        .container(lang="fr")
+        .container
           .form
             form(action="//formspree.io/info@quorumapps.com" method="POST")
               input(type="email" name="_replyto" placeholder="john@doe.com")
@@ -40,7 +35,8 @@ html
               input(type="submit" value="Go")
           .reachus
             .contact
-              h3 Contactez-nous
+              h3(lang="fr") Contactez-nous
+              h3(lang="en") Contact us
               span.phone
                 <i class="fa fa-phone"></i>
                 | +33 1 79 73 40 04
@@ -48,15 +44,17 @@ html
                 <i class="fa fa-envelope"></i>
                 | info@quorum-impact.com
             .cities
-              h3 Où nous trouver
+              h3(lang="fr") Où nous trouver
+              h3(lang="en") Where to find us
               .city
                 span 9 rue de Condé
                 span 33000 #[strong Bordeaux]
               .city
-                span Avenue de Villiers
+                span 124 Avenue de Villiers
                 span 75017 #[strong Paris]
             .social-links
-              h3 Suivez-nous
+              h3(lang="fr") Suivez-nous
+              h3(lang="en") Follow us
               ul
                 li
                   a(href='//facebook.com/quorumimpact' target="_blank")
@@ -71,9 +69,10 @@ html
                   a(href='//google.com/+Quorumappsdata' target="_blank")
                     i.icon-google
       section#newsletter
-        .container(lang="fr")
+        .container
           .content
-            span.signup Inscrivez-vous pour recevoir notre actualité
+            span(lang="fr").signup Inscrivez-vous pour recevoir notre actualité
+            span(lang="en").signup Get updates
             #mc_embed_signup
               form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
                 #mc_embed_signup_scroll
@@ -83,19 +82,7 @@ html
                   #mce-error-response.response(style="display:none")
                   #mce-success-response.response(style="display:none")
                   input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
-                  input(type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button")
-        .container(lang="en")
-          .content
-            span.signup Get updates
-            #mc_embed_signup
-              form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-                #mc_embed_signup_scroll
-                .mc-field-group
-                  input(type="email" value="" name="EMAIL" placeholder="john@doe.com" class="required email" id="mce-EMAIL")
-                #mce-responses.clear
-                  #mce-error-response.response(style="display:none")
-                  #mce-success-response.response(style="display:none")
-                  input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
-                  input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
+                  input(lang="fr" type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button")
+                  input(lang="en" type="submit" value="Get it" name="subscribe" id="mc-embedded-subscribe" class="button")
     include includes/footer.jade
     include includes/js.jade

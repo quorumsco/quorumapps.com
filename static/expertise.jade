@@ -1,0 +1,154 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Expertise - Quorum
+    meta(name='description' content='Quorum')
+    meta(name='keywords' content='quorum')
+    meta(name='author' content='Douézan-Grard Guillaume - Quorum')
+    link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
+    link(rel='stylesheet' href='stylesheets/app.css')
+  body.fr
+    include includes/nav.jade
+    header#page
+      .container
+        ul
+          li(lang="fr") Because Smart Data is stronger than Big Data
+          li(lang="en") Because Smart Data is stronger than Big Data
+          hr
+    main
+      section#skills
+        .container(lang="fr")
+          header
+            h3
+              span Compétences
+              hr
+          ul.content
+            li.skill
+              .skill-description.skill-1
+                h2 Data & Analytics
+                img(src='images/icons/data.png' alt='Icon Data')
+              ul.details
+                li Intelligence contextuelle
+                li Cartographie et constitution d’un patrimoine numérique
+                li Acquisition de données
+                li Remonter d’informations online et offline
+            li.skill
+              .skill-description.skill-2
+                h2 Prédictif & Logistique
+                img(src='images/icons/predictive.png' alt='Icon Prédictive')
+              ul.details
+                li Quants et Algorithmes
+                li Où agir ? Où concentrer mes forces ?
+            li.skill
+              .skill-description.skill-3
+                h2 Communication
+                img(src='images/icons/communication.png' alt='Icon Communication')
+              ul.details
+                li Gestion de la proximité et gestion de contacts
+                li Rencontrer les individus là où ils se trouvent
+                li Délivrer le message au bon moment
+            li.skill
+              .skill-description.skill-4
+                h2 Pilotage
+                img(src='images/icons/digital.png' alt='Icon Digital')
+              ul.details
+                li Applications web et mobiles intuitives
+                li Live Tracking et mesure d’impact de son action
+        .container(lang="en")
+          header
+            h3
+              span What we do
+              hr
+          ul.content
+            li.skill
+              .skill-description.skill-1
+                h2 Data & Analytics
+                img(src='images/icons/data.svg' alt='Icon Data')
+              ul.details
+                li Make territoritories and Data speak.
+                li Visualize key characteristics
+                li Public sentiment Measurment
+            li.skill
+              .skill-description.skill-2
+                h2 Predictive & Logistic
+                img(src='images/icons/predictive.png' alt='Icon Predictive')
+              ul.details
+                li Quants & Algortihms
+                li Identify swing zones
+                li Connect people with the right information and tools
+            li.skill
+              .skill-description.skill-3
+                h2 Communication
+                img(src='images/icons/communication.png' alt='Icon Communication')
+              ul.details
+                li Relationship Management
+                li Keep a record of every online and offline interaction with your contact base, to manage and qualify it
+                li Develop a long-term relationship of trust with people
+            li.skill
+              .skill-description.skill-4
+                h2 Digital
+                img(src='images/icons/digital.png' alt='Icon Digital')
+              ul.details
+                li Digitally sophisticated platforms
+                li Drive your actions both online and offline
+                li Live Tracking : Monitor Progress
+                li Motivate the team
+      section#quote
+        .container(lang="fr")
+          p Nous sommes une équipe de passionnés, de créatifs et de scientifiques qui  utilisent  le progrès pour créer de belles interfaces qui simplifient et optimisent les actions de ceux qui veulent apporter du changement.
+        .container(lang="en")
+          p We build data driven web and mobile apps and find new ways to solve problems.
+      section#approach
+        .container(lang="fr")
+          header
+            h3
+              span Notre démarche
+              hr
+          .content
+            .mockup
+              img(src='images/expertise/iphone-mockup.png' alt='Mockup iPhone')
+            .approach-items
+              ul
+                li
+                  span.number 1
+                  p Utiliser l’opportunité donnée par l’Open Data et  le Big Data.
+                  p Prendre la mesure de de la quantité de données qu’un mouvement, une ONG , qu’une campagne ou une administration produit dans son action quotidienne e et sur le terrain.
+                li
+                  span.number 2
+                  p Comprendre qu’aujourd’hui cette donnée peut être utilisée et utile pour l'action.
+                  p La Donnée en elle même est un enregistrement d’une information. Mais ces informations il faut les analyser, les croiser pour en tirer de l’intelligence.
+                li
+                  span.number 3
+                  p Parce que ces données intelligentes peuvent aider à comprendre quels phénomènes se produisent et ainsi améliorer l’impact de son action et régler des problèmes sociaux.
+        .container(lang="en")
+          header
+            h3
+              span The way we do it
+              hr
+          .content
+            .mockup
+              img(src='images/expertise/iphone-mockup.png' alt='Mockup iPhone')
+            .approach-items
+              ul
+                li
+                  span.number 1
+                  p TBD
+                li
+                  span.number 2
+                  p TBD
+                li
+                  span.number 3
+                  p TBD
+      section#cta.page
+        .container
+          .content
+            a.cta(href='/contact.html')
+              span(lang="fr") Demander une étude personnalisée
+              span(lang="en") Get in touch
+    include includes/footer.jade
+    include includes/js.jade

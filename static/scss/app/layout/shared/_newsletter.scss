@@ -4,7 +4,7 @@
     text-align: center;
 
     .signup {
-      font-size: 1.4em;
+      font-size: 1.2em;
       text-transform: uppercase;
     }
 
@@ -26,27 +26,29 @@
 
   @include susy-media($medium-screen) {
     #newsletter {
-      .content {
-        .mc-field-group {
-          display: inline-block;
-          width: 40%;
-        }
+      .signup {
+        font-size: 1.4em;
+      }
 
-        #mce-responses {
-          display: inline-block;
-          margin-left: 10px;
-        }
+      .mc-field-group {
+        display: inline-block;
+        width: 40%;
+      }
 
-        input[type="email"] {
-          border-color: transparent;
-        }
+      #mce-responses {
+        display: inline-block;
+        margin-left: 10px;
+      }
 
-        input[type="submit"] {
-          top: 0;
-          position: relative;
-          width: 100%;
-          border-radius: 0;
-        }
+      input[type="email"] {
+        border-color: transparent;
+      }
+
+      input[type="submit"] {
+        top: 0;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
       }
     }
   }

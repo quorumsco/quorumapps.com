@@ -15,62 +15,65 @@ html
   body.fr
     include includes/nav.jade
     header#page
-      .container(lang="fr")
+      .container
         ul
-          li La Data Agency
+          li(lang="fr") La Data Agency
+          li(lang="en") The Data Agency
           hr
         .quote
-          p Nous croyons en la connexion des intelligences, des savoirs et des experiences.
-      .container(lang="en")
-        ul
-          li The Data Agency
-          hr
-        .quote
-          p We believe in collective intelligence. we are assembling a team of passionate, creative people that strive to apply cutting edge research to real-world problems.
+          p(lang="fr") Nous croyons en la connexion des intelligences, des savoirs et des experiences.
+          p(lang="en") We believe in collective intelligence. we are assembling a team of passionate, creative people that strive to apply cutting edge research to real-world problems.
     main
       section#team
-        .container(lang="fr")
+        .container
           .content
             .team-member
               .icon-job
                 img(src='images/team/user.png')
               .job-description
-                span.job-title Data Analysts & Data Scientists
-                p.job-details Collecter les données, les nettoyer, en tirer l’intelligence.
+                span(lang="fr").job-title Data Analysts & Data Scientists
+                span(lang="en").job-title Data Analysts & Data Scientists
+                p(lang="fr").job-details Collecter les données, les nettoyer, en tirer l’intelligence.
+                p(lang="en").job-details
             .team-member
               .icon-job
                 img(src='images/team/user.png')
               .job-description
-                span.job-title Sciences Sociales/Cognitives
-                p.job-details Recherche en Sciences sociales, politiques et sciences cognitive, etude de terrain.
+                span(lang="fr").job-title Sciences Sociales/Cognitives
+                span(lang="en").job-title Campaigners
+                p(lang="fr").job-details Recherche en Sciences sociales, politiques et sciences cognitive, etude de terrain.
+                p(lang="en").job-details
             .team-member
               .icon-job
                 img(src='images/team/user.png')
               .job-description
-                span.job-title Developpeurs
-                p.job-details Rendre disponible nos recherches dans des interfaces intuitives, accessibles et prêtes à l’action concrete.
+                span(lang="fr").job-title Developpeurs
+                span(lang="en").job-title Developpers
+                p(lang="fr").job-details Rendre disponible nos recherches dans des interfaces intuitives, accessibles et prêtes à l’action concrete.
+                p(lang="en").job-details
             .team-member
               .icon-job
                 img(src='images/team/user.png')
               .job-description
-                span.job-title Communication
-                p.job-details Communiquer sur ce que la technologie est aujourd’hui capable de faire pour améliorer la société.
+                span(lang="fr").job-title Communication
+                span(lang="en").job-title Communication Officer
+                p(lang="fr").job-details Communiquer sur ce que la technologie est aujourd’hui capable de faire pour améliorer la société.
+                p(lang="en").job-details
             .team-member
               .icon-job
                 img(src='images/team/user.png')
               .job-description
-                span.job-title Juridique
-                p.job-details Protéger  les données personnelles et données sensibles. Pour toute question juridique : cil@quorumimpact.com
+                span(lang="fr").job-title Juridique
+                span(lang="en").job-title Legal expert
+                p(lang="fr").job-details Protéger  les données personnelles et données sensibles. Un correspondant informatique et libertés répond à vos questions (cil@quorumimpact.com)
+                p(lang="en").job-details
         .container(lang="en")
           .content
       section#cta.page
-        .container(lang="fr")
+        .container
           .content
             a.cta(href='//blog.quorumapps.com')
-              span Notre blog
-        .container(lang="en")
-          .content
-            a.cta(href='//blog.quorumapps.com')
-              span Our blog
+              span(lang="fr") Notre blog
+              span(lang="en") Our blog
     include includes/footer.jade
     include includes/js.jade

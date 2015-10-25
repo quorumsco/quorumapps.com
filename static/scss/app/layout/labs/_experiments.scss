@@ -1,32 +1,30 @@
 @include exports('experiments') {
   #experiments {
-    padding: 4em;
+    padding: 4em 2em;
 
     .experiment {
       height: 100%;
-
-      &:hover {
-        .experiment-thumbnail {
-          img {
-            opacity: 0.9;
-            -webkit-transform: scale3d(1.2, 1.2, 1);
-            transform: scale3d(1.2, 1.2, 1);
-          }
-        }
-      }
+      margin-bottom: 30px;
 
       .experiment-description {
-        padding: 20px;
+        position: relative;
+        padding: 80px 20px 20px 20px;
         box-sizing: border-box;
         background-color: #fbfbfb;
         color: #6F6F6F;
 
         .title {
-          font-family: 'Raleway', sans-serif;
           font-weight: 600;
           font-size: 1.1em;
           text-transform: uppercase;
-          margin-bottom: 15px;
+          position: absolute;
+          background-color: #2f95d0;
+          color: #fff;
+          width: 100%;
+          box-sizing: border-box;
+          top: 0;
+          left: 0;
+          padding: 15px 20px;
         }
 
         .project {
@@ -35,10 +33,12 @@
 
         li {
           position: relative;
+          margin-bottom: 20px;
           padding-left: 35px;
           box-sizing: border-box;
-          text-transform: uppercase;
-          font-size: 0.75em;
+          font-size: 0.9em;
+          font-weight: 600;
+          color: #000;
         }
 
         .skill-strategy,
@@ -73,12 +73,11 @@
 
       .experiment-thumbnail {
         overflow: hidden;
+        height: 220px;
 
         img {
           opacity: 0.6;
           background-color: #fff;
-          -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
           @include transition(all, .5s, cubic-bezier(0.7, 0, 0.3, 1));
         }
       }
@@ -86,44 +85,57 @@
 
     @include susy-media($medium-screen) {
       .experiment:nth-of-type(even) {
-        .experiment-description {
-          float: left;
+        .experiment-thumbnail {
+          float: right;
+        }
 
+        .experiment-description {
           &:after {
             position: absolute;
             z-index: 10;
             content: "";
             width: 0;
             height: 0;
-            right: -17px;
-            top: 10px;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 20px solid #fbfbfb;
+            right: -25px;
+            top: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 25px solid #2f95d0;
           }
         }
       }
 
       .experiment:nth-of-type(odd) {
         .experiment-description {
-          float: right;
-
           &:after {
             position: absolute;
             z-index: 10;
             content: "";
             width: 0;
             height: 0;
-            left: -20px;
-            top: 10px;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-right: 20px solid #fbfbfb;
+            left: -25px;
+            top: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 25px solid #2f95d0;
           }
         }
       }
 
       .experiment {
+        margin-bottom: 0;
+
+        &:hover {
+          .experiment-thumbnail {
+            img {
+              height: 100%;
+              opacity: 0.9;
+              -webkit-transform: scale3d(1.2, 1.2, 1);
+              transform: scale3d(1.2, 1.2, 1);
+            }
+          }
+        }
+
         .experiment-thumbnail, .experiment-description {
           position: relative;
           @include span(2 of 4);
@@ -131,12 +143,28 @@
           margin: 0;
           height: 333px;
         }
+
+        .experiment-thumbnail {
+          img {
+            width: 100%;
+            height: 100%;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
         .experiment-description {
+          padding-top: 60px;
+
+          .title {
+            height: 50px;
+          }
+
           .used-skills {
             li {
               @include span(2 of 4);
               width: 50%;
-              margin: 10px 0;
+              margin: 20px 0 0 0;
             }
           }
         }

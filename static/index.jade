@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Quorum
+    title Home - Quorum
     meta(name='description' content='Quorum')
     meta(name='keywords' content='quorum')
     meta(name='author' content='Douézan-Grard Guillaume - Quorum')
@@ -15,41 +15,36 @@ html
   body.fr
     include includes/nav.jade
     header#home
-      .container(lang="fr")
+      .container
         ul
-          li We use data & technology to make big ideas happen.
-      .container(lang="en")
-        ul
-          li We use data & technology to make big ideas happen.
+          li(lang="fr") We use data & technology to make big ideas happen.
+          li(lang="en") We use data & technology to make big ideas happen.
     main
       section#mission
-        .container(lang="fr")
+        .container
           header
             h3
-              span Notre mission
+              span(lang="fr") Notre mission
+              span(lang="en") Our mission
               hr
-          .content
-            p Quorum Impact est l’une des premières start up de civic-tech en Europe. Nous mettons les technologies au service de l’amélioration de la société et de l’action publique.
-            p Nous avons vu comment la Data Intelligence, les algorythmes, le Big data et les nouvelles technologies ont transformé à grande échelle le secteur financier, marchand ou logistique.
-            p Nous pensons que la technologie peut aussi aider à la résolution de problématiques civiques et citoyennes;  et ainsi aider l’action d’une ONG, d’une collectivité, un mouvement ou une campagne à être plus impactant, plus efficace et réinventer leur relation avec le public.
-            p Nous avons crée Quorum Impact, des interfaces web et mobiles, qui utilisent le pouvoir analytique et logistique des nouvelles technologies et les appliquent à des objectifs civiques et concrets.
+          .content(lang="fr")
+            p Quorum Impact est l’une des premières start up de #[strong civic-tech] en Europe : nous mettons la technologies au service de l’amélioration de la société et de l’action publique.
+            p Nous avons vu comment la #[strong Data Intelligence], les algorythmes, le #[strong Big data] et les nouvelles technologies ont transformé à grande échelle le secteur financier, marchand ou logistique.
+            p Nous pensons que la technologie peut aussi aider à la résolution de problématiques civiques et citoyennes;  et ainsi aider l’action d’une [#[strong ONG], d’une #[strong collectivité], un #[strong mouvement] ou une #[strong campagne] à être plus impactant, plus efficace et réinventer leur relation avec le public.
+            p Nous avons crée Quorum Impact, des #[strong interfaces web et mobiles], qui utilisent le pouvoir analytique et logistique des nouvelles technologies et les appliquent à des objectifs civiques et concrets.
             p Car nous pensons que la technologie peut d’augmenter la capacité des organisations et des individus,  pour qu’ils se focalisent sur l’essentiel : leurs idées et leurs actions.
-        .container(lang="en")
-          header
-            h3
-              span Our mission
-              hr
-          .content
+          .content(lang="en")
             p Quorum Impact is a civic-tech start-up; a start-up inventing new tools to empower actions.
             p We build web and mobile apps and provide technology to help our clients build meaningful, people-centered, and data driven actions, that achieve their strategic goals and make a change.
             p We rely on data to drive decisions and constantly look for new ways to solve problems.
             p We design our apps based on the latest research in political and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
             p Smart campaigns, smart actions and causes will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
       section#clients
-        .container(lang="fr")
+        .container
           header
             h3
-              span Pour qui ?
+              span(lang="fr") Pour qui ?
+              span(lang="en") Our clients
               hr
           ul.content
             li.item-follow
@@ -58,7 +53,8 @@ html
                   .who
                     .icon
                       i.icon-town
-                    h4 Collectivités territoriales
+                    h4(lang="fr") Collectivités territoriales
+                    h4(lang="en") Public Administration
                 .followed-bloc
                   img(src='images/home/administrations.jpg')
             li.item-follow
@@ -67,7 +63,8 @@ html
                   .who
                     .icon
                       i.icon-society
-                    h4 ONG &amp; Associations
+                    h4(lang="fr") ONG &amp; Associations
+                    h4(lang="en") Nonprofits
                 .followed-bloc
                   img(src='images/home/nonprofits.jpg')
             li.item-follow
@@ -76,7 +73,8 @@ html
                   .who
                     .icon
                       i.icon-vote
-                    h4 Candidats aux élections
+                    h4(lang="fr") Candidats aux élections
+                    h4(lang="en") Politics & Campaigners
                 .followed-bloc
                   img(src='images/home/elections.jpg')
             li.item-follow
@@ -85,64 +83,21 @@ html
                   .who
                     .icon
                       i.icon-megaphone
-                    h4 Leaders d'influence
+                    h4(lang="fr") Leaders d'influence
+                    h4(lang="en") Advocacy
                 .followed-bloc
                   img(src='images/home/leaders.jpg')
-        .container(lang="en")
-          header
-            h3
-              span Our clients
-              hr
-          ul.content
-            li.item-follow
-              a(href='/contact.html')
-                .followed-bloc.arrow-right
-                  .who
-                    .icon
-                      i.icon-town
-                    h4 Public Administration
-                .followed-bloc
-                  img(src='images/home/administrations.jpg')
-            li.item-follow
-              a(href='/contact.html')
-                .followed-bloc.arrow-right
-                  .who
-                    .icon
-                      i.icon-society
-                    h4 Nonprofits
-                .followed-bloc
-                  img(src='images/home/nonprofits.jpg')
-            li.item-follow
-              a(href='/contact.html')
-                .followed-bloc.arrow-left
-                  img(src='images/home/elections.jpg')
-                .followed-bloc
-                  .who
-                    .icon
-                      i.icon-vote
-                    h4 Politics & Campaigners
-            li.item-follow
-              a(href='/contact.html')
-                .followed-bloc.arrow-left
-                  img(src='images/home/leaders.jpg')
-                .followed-bloc
-                  .who
-                    .icon
-                      i.icon-megaphone
-                    h4 Advocacy
       section#cta
-        .container(lang="fr")
+        .container
           .content
-            a.cta(href='/offer.html')
-              span Découvrez nos offres
-        .container(lang="en")
-          .content
-            a.cta(href='/offer.html')
-              span What we do
+            a.cta(href='/expertise.html')
+              span(lang="fr") Notre expertise
+              span(lang="en") What we do
       section#newsletter
-        .container(lang="fr")
+        .container
           .content
-            span.signup Inscrivez-vous pour recevoir notre actualité
+            span(lang="fr").signup Inscrivez-vous pour recevoir notre actualité
+            span(lang="en").signup Get updates
             #mc_embed_signup
               form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
                 #mc_embed_signup_scroll
@@ -152,19 +107,7 @@ html
                   #mce-error-response.response(style="display:none")
                   #mce-success-response.response(style="display:none")
                   input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
-                  input(type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button")
-        .container(lang="en")
-          .content
-            span.signup Get updates
-            #mc_embed_signup
-              form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
-                #mc_embed_signup_scroll
-                .mc-field-group
-                  input(type="email" value="" name="EMAIL" placeholder="john@doe.com" class="required email" id="mce-EMAIL")
-                #mce-responses.clear
-                  #mce-error-response.response(style="display:none")
-                  #mce-success-response.response(style="display:none")
-                  input(type="text" name="b_8d7c7595072992d8808c7993d_e648f190bc" tabindex="-1" value="" style="display:none")
-                  input(type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button")
+                  input(lang="fr" type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button")
+                  input(lang="en" type="submit" value="Get it" name="subscribe" id="mc-embedded-subscribe" class="button")
     include includes/footer.jade
     include includes/js.jade

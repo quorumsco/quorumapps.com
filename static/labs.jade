@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1')
-    title Company - Quorum
+    title Labs - Quorum
     meta(name='description' content='Quorum')
     meta(name='keywords' content='quorum')
     meta(name='author' content='Douézan-Grard Guillaume - Quorum')
@@ -15,22 +15,21 @@ html
   body.fr
     include includes/nav.jade
     header#page
-      .container(lang="fr")
+      .container
         ul
-          li Living Lab
+          li(lang="fr") Living Lab
+          li(lang="en") Living Lab
           hr
         .quote
-          p Un living lab est un laboratoire d’innovation ouverte. Nous partons des besoins du terrain pour trouver de nouveaux moyens d’améliorer l’action.
-      .container(lang="en")
-        ul
-          li Living Lab
-          hr
-        .quote A living lab is a research concept. A living lab is a user-centred, open-innovation ecosystem, often operating in a territorial context (e.g. city, agglomeration, region), integrating concurrent research and innovation processes within a public-private-people partnership.
+          p(lang="fr") Un living lab est un laboratoire d’innovation ouverte. Nous partons des besoins du terrain pour trouver de nouveaux moyens d’améliorer l’action.
+          p(lang="en") A living lab is a research concept. A living lab is a user-centred, open-innovation ecosystem, often operating in a territorial context (e.g. city, agglomeration, region), integrating concurrent research and innovation processes within a public-private-people partnership.
     main
       section#experiments
         .container(lang="fr")
           .content
             .experiment
+              .experiment-thumbnail
+                img(src='images/labs/elections.jpg')
               .experiment-description
                 span.title Élections départementales 2015
                 p.project Créer de engagement : Data prédictive, logistique, cartographie, gestion de proximité
@@ -42,9 +41,9 @@ html
                     li.skill-impact Mesurer l’impact
                     li.skill-engagement Créer du lien
                     li.skill-organisation Renforcer son organisation
-              .experiment-thumbnail
-                img(src='images/labs/elections.jpg')
             .experiment
+              .experiment-thumbnail
+                img(src='images/labs/twitter.jpg')
               .experiment-description
                 span.title Mastering Data on Twitter
                 p.project Analyser les réseaux sociaux en temps reel à partir d’un mot clé. Mesurer l’évolution et les mots clés associés.
@@ -52,9 +51,9 @@ html
                   ul
                     li.skill-strategy Stratégies Adaptées
                     li.skill-info Remontée d’information
-              .experiment-thumbnail
-                img(src='images/labs/twitter.jpg')
             .experiment
+              .experiment-thumbnail
+                img(src='images/labs/civisen.jpg')
               .experiment-description
                 span.title CIVISENS – Améliorer la mobilisation citoyenne
                 p.project Notre application web accompagnent les collectivités pour lutter contre la non ou la mal inscription sur les listes électorales, et ainsi faciliter la gestion des enjeux démocratiques, démographiques et logistiques auxquels les collectivités doivent faire face.
@@ -64,18 +63,50 @@ html
                     li.skill-tools Outils Intuitifs
                     li.skill-info Remontée d’information
                     li.skill-impact Mesurer l’impact
+        .container(lang="en")
+          .content
+            .content
+            .experiment
+              .experiment-thumbnail
+                img(src='images/labs/elections.jpg')
+              .experiment-description
+                span.title Departementales Elections March 2015
+                p.project Tools to find voters, persuade and turn out them. Target priority areas and track in real time your progress. Smart Canvassing. Collect Data and Measure Public Sentiment. Connect people with the right information and right timing.
+                .used-skills
+                  ul
+                    li.skill-strategy Adaptive Strategies
+                    li.skill-tools Intuitive tools
+                    li.skill-info Plan effective fied actions
+                    li.skill-impact Live Tracking
+                    li.skill-engagement Build Meaningful relationship
+                    li.skill-organisation Empower your action
+            .experiment
+              .experiment-thumbnail
+                img(src='images/labs/twitter.jpg')
+              .experiment-description
+                span.title Analytics Tools for Twitter
+                p.project Track and analyse the evolution of a key-word in real time through Twitter measure its relations with other popular hashtags.
+                .used-skills
+                  ul
+                    li.skill-strategy Adaptive Strategies
+                    li.skill-info Plan effective fied actions
+            .experiment
               .experiment-thumbnail
                 img(src='images/labs/civisen.jpg')
-        .container(lang="en")
-          .content
+              .experiment-description
+                span.title Voter registration
+                p.project We help Public Admnisitration in their mission to incease access to voting at the local level. Find technological and data driven solutions to logisticals problems. Deliver targeted messages. Expand access to the ballot box.
+                .used-skills
+                  ul
+                    li.skill-strategy Adaptive Strategies
+                    li.skill-tools Intuitive tools
+                    li.skill-info Plan effective fied actions
+                    li.skill-impact Live Tracking
       section#cta.page
-        .container(lang="fr")
+        .container
           .content
             a.cta(href='/contact.html')
-              span Demander une étude personnalisée
-        .container(lang="en")
-          .content
-            a.cta(href='/contact.html')
-              span Get in touch
+              span(lang="fr") Demander une étude personnalisée
+              span(lang="en") Get in touch
     include includes/footer.jade
     include includes/js.jade
