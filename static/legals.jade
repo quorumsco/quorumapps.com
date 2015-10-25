@@ -11,23 +11,19 @@ html
     link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
     link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
     link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lora')
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
     include includes/nav.jade
     header#page
-      .container(lang="fr")
+      .container
         ul
-          li Mentions légales
+          li(lang="fr") Mentions légales
+          li(lang="en") Legals
           hr
         .quote
-          p Conditions générales d'utilisation
-      .container(lang="en")
-        ul
-          li Legals
-          hr
-        .quotes
-          p TBD
+          p(lang="fr") Conditions générales d'utilisation
+          p(lang="en") TBD
     main
       section#legals
         .container(lang="fr")
@@ -118,5 +114,7 @@ html
           p Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
           p #[em ©Quorum2015]
         .container(lang="en")
+          h3 TBD
+          p TBD
     include includes/footer.jade
     include includes/js.jade
