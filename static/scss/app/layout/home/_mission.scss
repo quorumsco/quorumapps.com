@@ -1,33 +1,27 @@
 @include exports('mission') {
   #mission {
-    background-color: #fbfbfb;
-  }
+    background-color: $light-gray;
 
-  #mission .content {
-
-    p, ul {
-      font-family: $font-quote;
-      font-size: 1.25em;
-      line-height: 1.5em;
-      margin-bottom: 1.5em;
+    .content {
+      p {
+        font-family: $font-quote;
+        @include adjust-font-size-to(ms(1), 1);
+        line-height: 1.5em;
+        margin-bottom: 1.5em;
+      }
     }
 
-    ul {
-      list-style: inside;
-      margin-left: 1.5em;
-    }
-  }
+    @include susy-media($medium-screen) {
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
 
-  @include susy-media($medium-screen) {
-    #mission .content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    #mission .content p {
-      font-size: 1.25em;
-      line-height: 1.5em;
-      margin-bottom: 1.5em;
+        p {
+          @include adjust-font-size-to(ms(2), 1);
+          line-height: 1.5em;
+          margin-bottom: 1.5em;
+        }
+      }
     }
   }
 }

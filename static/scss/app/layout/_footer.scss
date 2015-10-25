@@ -4,30 +4,11 @@
     color: #fff;
     background-color: #312f38;;
     position: relative;
-
-    /*&::before {
-      content: "";
-      background-image: url('../images/Bottom_Header3.jpg');
-      background-position: bottom center;
-      background-repeat: no-repeat;
-      opacity: 0.8;
-      top: -180px;
-      left: 0;
-      bottom: 93px;
-      right: 0;
-      position: absolute;
-      z-index: 1;
-    }*/
+    text-align: center;
 
     .container {
       position: relative;
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
       z-index: 1;
     }
 
@@ -47,8 +28,12 @@
       }
     }
 
+    .copyright {
+      margin-bottom: 20px;
+    }
+
     .social-links {
-      margin-left: 20px;
+      margin-bottom: 10px;
 
       i {
         position: relative;
@@ -57,21 +42,24 @@
       }
     }
 
-    .pages {
-      position: absolute;
-      right: 0;
-    }
-  }
+    @include susy-media($medium-screen) {
+      .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+      }
 
-  @include susy-media($medium-screen) {
-    #footer {
-      @include container;
-    }
-  }
+      .social-links {
+        margin-left: 20px;
+      }
 
-  @include susy-media($medium-screen) {
-    #footer {
-      @include container;
+      .pages {
+        position: absolute;
+        right: 0;
+      }
     }
   }
 }

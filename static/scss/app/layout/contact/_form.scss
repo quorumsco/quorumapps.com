@@ -1,8 +1,0 @@
-@include exports('form') {
-  #form {
-
-    @include susy-media($medium-screen) {
-
-    }
-  }
-}

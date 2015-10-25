@@ -12,34 +12,21 @@
       margin-top: 30px;
     }
 
-    textarea:focus, input:focus {
-      color: #6F6F6F;
-      border-color: #6F6F6F;
-      -webkit-box-shadow: 0px 0px 4px #6F6F6F;
-      -moz-box-shadow: 0px 0px 4px #6F6F6F;
-      box-shadow: 0px 0px 4px #6F6F6F;
-    }
-
     input[type="email"] {
-      padding: 10.5px;
+      border-color: #E4E4E4;
     }
 
     input[type="submit"] {
-      background-color: $cta-color;
-      text-transform: uppercase;
-      @include transition(all, .3s, ease-in-out);
-
-      &:hover {
-        background-color: $cta-color-hover;
-      }
+      top: -13px;
+      position: relative;
+      width: 100%;
+      border-radius: 0 0 3px 3px;
     }
-
   }
 
   @include susy-media($medium-screen) {
     #newsletter {
       .content {
-
         .mc-field-group {
           display: inline-block;
           width: 40%;
@@ -50,6 +37,16 @@
           margin-left: 10px;
         }
 
+        input[type="email"] {
+          border-color: transparent;
+        }
+
+        input[type="submit"] {
+          top: 0;
+          position: relative;
+          width: 100%;
+          border-radius: 0;
+        }
       }
     }
   }

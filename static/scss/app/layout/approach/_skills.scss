@@ -8,34 +8,20 @@
     }
   }
 
-  #skills .container {
-    max-width: 100%;
-  }
-
-  #skills .content {
 
 
     .skill {
       display: inline-block;
       position: relative;
       box-sizing: border-box;
-      width: 25%;
-      min-width: 233px;
-      height: 300px;
-      border: 1px solid #f5f5f5;
       overflow: hidden;
 
-      /*&:hover {
-        .back {
-          transform: translateY(17%);
-        }
-      }*/
 
-      .front {
+      .skill-description {
+        background-color: #bf578c;
         h2 {
-          padding: 15px 20px;
+          padding: 15px 15px;
           margin-bottom: 0;
-          font-size: 1.2em;
           color: #fff;
           font-family: 'Oxygen', sans-serif;
           text-transform: uppercase;
@@ -43,9 +29,9 @@
 
         img {
           position: absolute;
-          width: 10%;
-          top: 10px;
-          right: 12px;
+          width: 20px;
+          top: 15px;
+          right: 15px;
         }
       }
 
@@ -59,24 +45,6 @@
         box-sizing: border-box;
         background-color: $light-gray;
         transform: translateY(17%);
-        /*transform: translateY(96%);*/
-        /*-webkit-transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);
-        transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1);*/
-
-        /*&:before {
-          top: -6%;
-          right: 6%;
-          border: solid transparent;
-          content: " ";
-          height: 0;
-          width: 0;
-          position: absolute;
-          pointer-events: none;
-          border-color: rgba(136, 183, 213, 0);
-          border-bottom-color: $light-gray;
-          border-width: 10px;
-          z-index: 10;
-        }*/
 
         li {
           font-family: 'Open Sans', sans-serif;
@@ -100,9 +68,26 @@
     .skill-2 { background-color: #fc5c5e; }
     .skill-3 { background-color: #2f95d0; }
     .skill-4 { background-color: #bf578c; }
-  }
+
 
   @include susy-media($medium-screen) {
+    .skill {
+      position: relative;
+      @include span(1 of 4);
+      width: 25%;
+      margin: 0 .75%;
 
+      h2 {
+        @include adjust-font-size-to(ms(0.2), 1);
+      }
+    }
+
+    .skill:first-child {
+      margin-left: 0.25%;
+    }
+
+    .skill:last-child {
+      margin-right: 0.25%;
+    }
   }
 }

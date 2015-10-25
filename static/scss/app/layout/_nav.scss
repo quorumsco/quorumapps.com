@@ -1,45 +1,28 @@
-$nav-height: 2;
-$nav-border-color: rgba(#000, .2);
-$nav-scrolled: #fff;
-$font-scrolled: #222;
-
 @include exports('nav') {
   #nav {
     @include position(fixed, 0 0 auto 0);
     @include clearfix;
-    background-color: #fff;
     z-index: 100;
     padding: 0 1em;
     height: 3*$base-line-height;
     line-height: 3*$base-line-height;
 
-    -webkit-box-shadow: 0px -1px 5px 2px rgba(168,168,168,1);
-    -moz-box-shadow: 0px -1px 5px 2px rgba(168,168,168,1);
-    box-shadow: 0px -1px 5px 2px rgba(168,168,168,1);
-
-    &.scrolled {
-      background-color: $nav-scrolled;
-      a{
-        color: $font-scrolled;
-      }
-    }
+    background-color: $nav-background-color;
+    @include box-shadow(0px -1px 5px 2px rgba(168,168,168,1));
 
     h1 {
       @include adjust-font-size-to(ms(0), 2);
       height: 100%;
 
       a {
-        display: inline-block;
-        vertical-align: middle;
+        margin: 0;
       }
     }
 
     a {
-      font-family: 'Ubuntu';
+      font-family: $heading-font-family;
       text-transform: uppercase;
       color: #222;
-      //color: lighten(#000, 50%);
-/*      text-transform: uppercase;*/
 
       &:hover {
         color: #a1a4a7;
@@ -51,20 +34,30 @@ $font-scrolled: #222;
     display: inline-block;
     vertical-align: middle;
     margin: 0;
+
+    img {
+      height: 45px;
+      display: inline-block;
+      vertical-align: middle;
+      float: left;
+    }
   }
 
   .nav-toggle {
     float: right;
   }
 
+  .nav-brand a {
+    @include adjust-font-size-to(ms(0), 2);
+  }
+
+  /* Hide mobile menu */
   .nav-links {
     display: none;
   }
 
   #nav.show-menu {
-    background-color: rgba(darken(#fff, 4%), .85);
-
-    .social-links {
+    .lang {
       li {
         display: inline-block;
         vertical-align: top;
@@ -76,15 +69,41 @@ $font-scrolled: #222;
     }
 
     .nav-links {
+      z-index: 99;
+      box-sizing: border-box;
+      background-color: $nav-background-color;
+      border: 1px solid $light-gray;
+      border-top: none;
       display: block;
       line-height: 3*$base-line-height;
 
-      img {
+      .main-links li {
+        padding: 0 20px;
+        border-bottom: 1px solid $light-gray;
         position: relative;
+        height: 4em;
+        line-height: 4em;
+
+        &:hover {
+          background-color: $light-gray;
+        }
+
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          @include adjust-font-size-to(ms(1), 1.5);
+          line-height: inherit;
+        }
       }
 
-      a {
-        @include adjust-font-size-to(ms(1), 1.5);
+      img {
+        position: relative;
+        top: 5px;
+        left: 20px;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
       }
 
       .fa {
@@ -94,47 +113,30 @@ $font-scrolled: #222;
     }
   }
 
-  .nav-brand a,
-  .nav-toggle a {
-    @include adjust-font-size-to(ms(0), $nav-height);
-  }
-
-  .nav-brand img {
-    height: 45px;
-    display: inline-block;
-    vertical-align: middle;
-    float: left;
-  }
-
   @include susy-media($medium-screen) {
     #nav {
       .nav-links {
         display: block;
-        // height: 2*$base-line-height;
         float: right;
       }
 
       .main-links,
-      .social-links,
+      .lang,
       .main-links li,
-      .social-links li {
+      .lang li {
         height: 3*$base-line-height;
         display: inline-block;
         vertical-align: top;
       }
 
-      i.lang {
-        font-style: initial;
-      }
-
       .main-links {
-        font-size: 1.2em;
+        font-size: 1em;
         li {
           margin-left: 2em;
         }
       }
 
-      .social-links {
+      .lang {
         font-size: 1.2em;
         margin-left: 2em;;
 
@@ -185,7 +187,7 @@ $font-scrolled: #222;
       }
 
       .main-links li,
-      .social-links li {
+      .lang li {
         height: 3*$base-line-height;
         line-height: 3*$base-line-height;
       }

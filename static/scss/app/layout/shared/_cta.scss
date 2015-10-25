@@ -2,8 +2,8 @@
   #cta {
     position: relative;
     height: 150px;
-    text-align: center;
     padding: 1em 0 2em 0;
+    text-align: center;
 
     a { z-index: 5; }
 
@@ -23,9 +23,11 @@
       height: 60px;
       line-height: 60px;
       color: #fff;
-      //background-color: #6c59b4;
       background-color: $cta-color;
-      padding: 0px 50px;
+
+      max-width: 300px;
+      font-size: 0.6em;
+      padding: 0 20px;
       overflow: hidden;
       border: 1px solid #ff725b;
       border-radius: 3px;
@@ -42,16 +44,17 @@
       span {
         text-transform: uppercase;
         font-size: 1.4em;
-        font-family: 'Ubuntu', sans-serif;
       }
     }
 
+    .page { background-color: #fbfbfb; }
+
     @include susy-media($medium-screen) {
-      #cta .content {
-        @include container;
+      .cta {
+        max-width: 550px;
+        font-size: 1em;
+        padding: 0px 50px;
       }
     }
   }
-
-  .page { background-color: #fbfbfb; }
 }

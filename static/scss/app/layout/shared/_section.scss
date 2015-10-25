@@ -3,7 +3,7 @@ $header-line-height: 1.5;
 
 @include exports('section') {
   section {
-    padding: 4em;
+    padding: 4em 2em;
     background-color: #fff;
 
     .container > header {

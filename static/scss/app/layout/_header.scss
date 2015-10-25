@@ -28,6 +28,10 @@
       z-index: -1;
     }
 
+    .container {
+      padding-top: 350px;
+    }
+
     hr {
       border-bottom: 0.3em solid #222;
     }
@@ -60,6 +64,10 @@
       z-index: -1;
     }
 
+    .container {
+      padding-top: 175px;
+    }
+
     hr {
       border-bottom: 0.3em solid #222;
       text-shadow: 0px 2px 4px rgba(150, 150, 150, 0.9);
@@ -73,7 +81,6 @@
 
   #home, #page {
     .container {
-      padding-top: 175px;
       overflow: hidden;
     }
 

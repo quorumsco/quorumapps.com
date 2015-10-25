@@ -16,6 +16,10 @@ $susy: (
   gutters: 1/8
 );
 
+html,body {
+  height:100%;
+}
+
 .container {
   @include container($small-screen);
 

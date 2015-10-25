@@ -11,7 +11,6 @@ html
     link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
     link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
     link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
-    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700')
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
     include includes/nav.jade
@@ -27,7 +26,7 @@ html
         .container(lang="fr")
           header
             h3
-              span Notre #[em mission]
+              span Notre mission
               hr
           .content
             p Quorum Impact est l’une des premières start up de civic-tech en Europe. Nous mettons les technologies au service de l’amélioration de la société et de l’action publique.
@@ -38,25 +37,24 @@ html
         .container(lang="en")
           header
             h3
-              span Our #[em mission]
+              span Our mission
               hr
           .content
-            .description
-              p Quorum Impact is a civic-tech start-up; a start-up inventing new tools to empower actions.
-              p We build web and mobile apps and provide technology to help our clients build meaningful, people-centered, and data driven actions, that achieve their strategic goals and make a change.
-              p We rely on data to drive decisions and constantly look for new ways to solve problems.
-              p We design our apps based on the latest research in political and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
-              p Smart campaigns, smart actions and causes will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
-      section#we-follow
+            p Quorum Impact is a civic-tech start-up; a start-up inventing new tools to empower actions.
+            p We build web and mobile apps and provide technology to help our clients build meaningful, people-centered, and data driven actions, that achieve their strategic goals and make a change.
+            p We rely on data to drive decisions and constantly look for new ways to solve problems.
+            p We design our apps based on the latest research in political and Data Science and the opportunities offered by Open Data, Big Data, and new technologies.
+            p Smart campaigns, smart actions and causes will be the ones who embrace new technology, make it a priority to stay ahead of the curve.
+      section#clients
         .container(lang="fr")
           header
             h3
-              span Pour #[em qui ?]
+              span Pour qui ?
               hr
           ul.content
             li.item-follow
               a(href='/contact.html')
-                .followed-bloc.arrow-right
+                .followed-bloc
                   .who
                     .icon
                       i.icon-town
@@ -65,7 +63,7 @@ html
                   img(src='images/home/administrations.jpg')
             li.item-follow
               a(href='/contact.html')
-                .followed-bloc.arrow-right
+                .followed-bloc
                   .who
                     .icon
                       i.icon-society
@@ -74,26 +72,26 @@ html
                   img(src='images/home/nonprofits.jpg')
             li.item-follow
               a(href='/contact.html')
-                .followed-bloc.arrow-left
-                  img(src='images/home/elections.jpg')
                 .followed-bloc
                   .who
                     .icon
                       i.icon-vote
                     h4 Candidats aux élections
+                .followed-bloc
+                  img(src='images/home/elections.jpg')
             li.item-follow
               a(href='/contact.html')
-                .followed-bloc.arrow-left
-                  img(src='images/home/leaders.jpg')
                 .followed-bloc
                   .who
                     .icon
                       i.icon-megaphone
                     h4 Leaders d'influence
+                .followed-bloc
+                  img(src='images/home/leaders.jpg')
         .container(lang="en")
           header
             h3
-              span Our #[em clients]
+              span Our clients
               hr
           ul.content
             li.item-follow
@@ -162,7 +160,7 @@ html
               form(action="//quorum-impact.us12.list-manage.com/subscribe/post?u=8d7c7595072992d8808c7993d&amp;id=e648f190bc" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate)
                 #mc_embed_signup_scroll
                 .mc-field-group
-                  input(type="email" value="" name="EMAIL" placeholder="john@goe.com" class="required email" id="mce-EMAIL")
+                  input(type="email" value="" name="EMAIL" placeholder="john@doe.com" class="required email" id="mce-EMAIL")
                 #mce-responses.clear
                   #mce-error-response.response(style="display:none")
                   #mce-success-response.response(style="display:none")
