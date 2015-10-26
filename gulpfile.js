@@ -1,4 +1,4 @@
-var gulp        = require('gulp'),
+var gulp      = require('gulp'),
   browserify  = require('browserify'),
   source      = require('vinyl-source-stream'),
   streamify   = require('gulp-streamify'),

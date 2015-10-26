@@ -1,0 +1,30 @@
+@include exports('mission') {
+  #mission {
+    background-color: $light-gray;
+
+    .content {
+      p {
+        font-family: $font-quote;
+        @include adjust-font-size-to(ms(1), 1);
+        line-height: 1.5em;
+        margin-bottom: 1.5em;
+      }
+    }
+    .mockup {
+      text-align: center;
+    }
+
+    @include susy-media($medium-screen) {
+      .content {
+        max-width: 600px;
+        margin: 0 auto;
+
+        p {
+          @include adjust-font-size-to(ms(2), 1);
+          line-height: 1.5em;
+          margin-bottom: 1.5em;
+        }
+      }
+    }
+  }
+}

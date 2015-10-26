@@ -1,0 +1,272 @@
+@include exports('header') {
+
+  #home, #page {
+    .container {
+      position: relative;
+    }
+  }
+
+  #home {
+    position: relative;
+    height: 100vh;
+    padding: 1em;
+    padding-top: ($nav-height + 0.5) * $base-line-height;
+    box-sizing: border-box;
+
+    &:after {
+      content: "";
+      background-image: url('../images/header/quorum-header.jpg');
+      background-position: top center;
+      background-size: 800px auto;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .container {
+      padding-top: 400px;
+      width: 100%;
+    }
+
+    hr {
+      border-bottom: 0.3em solid #222;
+    }
+
+    li {
+      @include adjust-font-size-to(ms(6), 1.5);
+      color: #6F6F6F;
+    }
+  }
+
+  #page_anim,
+  #page {
+    position: relative;
+    padding: 1em;
+    padding-top: ($nav-height + 0.5) * $base-line-height;
+    box-sizing: border-box;
+
+    span#slide {
+      text-align: center;
+      color: #6F6F6F;
+      em {
+        color: #6F6F6F;
+        text-shadow: none;
+        font-style: normal;
+      }
+    }
+
+    ul {
+      li.subtitle {
+        em {
+          color: #6F6F6F;
+          text-shadow: none;   
+          font-style: normal;
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      background-image: url('../images/header/quorum-header.jpg');
+      background-position: top center;
+      background-size: 700px auto;
+      background-repeat: no-repeat;
+      top: -206px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .container {
+      padding-top: 175px;
+    }
+
+    hr {
+      border-bottom: 0.3em solid #222;
+      text-shadow: 0px 2px 4px rgba(150, 150, 150, 0.9);
+    }
+
+    li {
+      @include adjust-font-size-to(ms(5), 1.5);
+      color: #6F6F6F;
+    }
+  }
+
+  #page_anim {
+    height: 500px;
+  }
+
+  #page {
+    height: 400px;
+  }
+
+  #home, #page, #page_anim {
+    .container {
+      overflow: hidden;
+    }
+
+    hr {
+      margin: 5% 45% 5% 45%;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li, span, #typed-strings {
+      text-align: center;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    li {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    span, #typed-strings {
+      text-transform: none;
+      font-family: 'Oxygen', sans-serif;
+      @include adjust-font-size-to(ms(5), 1.5);
+      color: #fff;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    li.subtitle {
+      font-family: 'Oxygen', sans-serif;
+      @include adjust-font-size-to(ms(4), 1);
+    }
+    li.arrow {
+      display: none;
+    }
+
+    .quote {
+      width: 100%;
+
+      p {
+        font-family: $font-quote;
+        color: #6F6F6F;
+        text-align: center;
+        @include adjust-font-size-to(ms(3), 3);
+        line-height: 1.2em;
+        position: relative;
+      }
+    }
+  }
+
+  .typed-cursor {
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @include susy-media($medium-screen) {
+
+    #home {
+      height: 100vh;
+
+      .container {
+        padding-top: 35%;
+      }
+
+      li { @include adjust-font-size-to(ms(7), 3); }
+    }
+
+    #page_anim {
+      height: 600px;
+
+      .anim {
+        position: absolute;
+        left: 0;
+        padding-top: 5%;
+        height: 30%;
+        background-color: #fbfbfb;
+        width: 100%;
+      }
+
+      .container {
+        padding-top: 145px;
+      }
+
+      li { @include adjust-font-size-to(ms(7), 3); }
+    }
+
+    #page {
+      height: 400px;
+
+      .container {
+        padding-top: 145px;
+      }
+
+      li { @include adjust-font-size-to(ms(7), 3); }
+    }
+
+    #home, #page, #page_anim {
+      padding-top: ($nav-height + 1.5) * $base-line-height;
+
+      .container {
+          overflow: hidden;
+      }
+
+       hr {
+        margin: 2% 45% 3% 45%;
+      }
+
+        span, #typed-strings {
+          @include adjust-font-size-to(ms(10), 3);
+        }
+
+        span, #typed-strings {
+          font-family: 'Oxygen', sans-serif;
+          text-transform: none;
+          @include adjust-font-size-to(ms(8.5), 3);
+
+          p {
+            margin-bottom: 0;
+          }
+        }
+        li.subtitle {
+          font-family: 'Oxygen', sans-serif;
+          margin-top: 0.2em;
+          text-transform: none;
+          @include adjust-font-size-to(ms(7), 2);
+        }
+
+      .quote {
+        width: 100%;
+
+        p {
+          font-family: $font-quote;
+          color: #6F6F6F;
+          text-align: center;
+/*          @include adjust-font-size-to(ms(5), 3);*/
+          line-height: 1.2em;
+          position: relative;
+        }
+      }
+    }
+  }
+}

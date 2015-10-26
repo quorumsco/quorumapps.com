@@ -1,0 +1,34 @@
+nav#nav
+  .container
+    h1.nav-brand
+      a(href='/')
+        img(src='images/nav/quorum-logo.png' alt='Quorum')
+    .nav-toggle
+      a(href='#')
+        i.fa.fa-fw.fa-bars
+    .nav-links
+      ul.main-links
+        li
+          a(href='/' lang="fr") Accueil
+          a(href='/' lang="en") Home
+        li
+          a(href='/expertise.html' lang="fr") Expertise
+          a(href='/expertise.html' lang="en") Our approach
+        li
+          a(href='/labs.html' lang="fr") Labs
+          a(href='/labs.html' lang="en") Labs
+        li
+          a(href='/team.html' lang="fr") Équipe
+          a(href='/team.html' lang="en") Team
+        li
+          a(href='//blog.quorumapps.com') Blog
+        li
+          a(href='/contact.html')
+            i.fa.fa-fw.fa-envelope-o
+      ul.lang
+        li
+          a(href="#" onClick="document.body.className='en'; event.preventDefault();" lang='fr')
+            img(src='images/nav/english.jpg' alt='English')
+        li
+          a(href="#" onClick="document.body.className='fr'; event.preventDefault();" lang='en')
+            img(src='images/nav/french.jpg' alt='Français')

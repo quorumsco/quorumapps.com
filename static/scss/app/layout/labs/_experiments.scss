@@ -1,0 +1,218 @@
+@include exports('experiments') {
+  #experiments {
+    padding: 4em 2em;
+
+    .experiment:nth-child(1) {
+      background: url('../images/labs/elections.jpg') no-repeat center;
+    }
+    .experiment:nth-child(2) {
+      background: url('../images/labs/twitter.jpg') no-repeat center;
+    }
+    .experiment:nth-child(3) {
+      background: url('../images/labs/civisen.jpg') no-repeat center;
+    }
+
+    .experiment {
+      .mockup {
+        display: none;
+      }
+
+      .experiment-description {
+        display: block;
+        position: relative;
+        padding: 80px 20px 20px 20px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 40%;
+        color: #6F6F6F;
+
+        .title {
+          font-weight: 600;
+          font-size: 1.1em;
+          text-transform: uppercase;
+          position: absolute;
+          color: #000;
+          width: 100%;
+          box-sizing: border-box;
+          top: 0;
+          left: 0;
+          padding: 15px 30px;
+        }
+
+        .project {
+          margin: 10px 0 20px 0;
+        }
+
+        li {
+          position: relative;
+          margin-bottom: 20px;
+          padding-left: 35px;
+          box-sizing: border-box;
+          font-size: 0.9em;
+          font-weight: 600;
+          color: #000;
+        }
+
+        .skill-strategy,
+        .skill-tools,
+        .skill-info,
+        .skill-impact,
+        .skill-engagement,
+        .skill-organisation {
+          &:before {
+            position: absolute;
+            background-size: 25px 25px;
+            background-position: top left;
+            background-repeat: no-repeat;
+            content: '';
+            z-index: 10;
+            width: 25px;
+            height: 25px;
+            left: 0px;
+            top: 0px;
+          }
+        }
+
+        .skill-strategy { &:before { background-image: url('../images/labs/strategy.svg');} }
+        .skill-tools { &:before { background-image: url('../images/labs/tools.svg');} }
+        .skill-info { &:before { background-image: url('../images/labs/info.svg');} }
+        .skill-impact { &:before { background-image: url('../images/labs/impact.svg');} }
+        .skill-engagement { &:before { background-image: url('../images/labs/engagement.svg');} }
+        .skill-organisation { &:before { background-image: url('../images/labs/organisation.svg');} }
+      }
+
+      .experiment-thumbnail {
+        overflow: hidden;
+        height: 220px;
+
+        img {
+          opacity: 0;
+          background-color: #fff;
+          @include transition(all, .5s, cubic-bezier(0.7, 0, 0.3, 1));
+        }
+      }
+    }
+
+    @include susy-media($xlarge-screen) {
+
+    }
+
+    @include susy-media($medium-screen) {
+      .experiment:nth-of-type(even) {
+        .experiment-thumbnail {
+          float: right;
+        }
+
+/*        .experiment-description {
+          &:after {
+            position: absolute;
+            z-index: 10;
+            content: "";
+            width: 0;
+            height: 0;
+            right: -25px;
+            top: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-left: 25px solid darken(lightgrey, 10%);
+          }
+        }*/
+      }
+
+/*      .experiment:nth-of-type(odd) {
+        .experiment-description {
+          &:after {
+            position: absolute;
+            z-index: 10;
+            content: "";
+            width: 0;
+            height: 0;
+            left: -25px;
+            top: 0;
+            border-top: 25px solid transparent;
+            border-bottom: 25px solid transparent;
+            border-right: 25px solid darken(lightgrey, 10%);
+          }
+        }
+      }
+*/
+      .experiment {
+        position: relative;
+        margin: 30px auto 80px;
+        width: 100%;
+        max-width: 1000px;
+
+        .experiment-thumbnail, .experiment-description {
+          position: relative;
+          @include span(2 of 4);
+          width: 50%;
+          margin: 0;
+          height: 50%;
+        }
+
+        .content {
+          height: 390px;
+          padding-top: 100px;
+        }
+
+        .narrow-content {
+          max-width: 960px;
+          margin: 0 auto;
+        }
+
+        .row {
+          margin-bottom: 0!important;
+        }
+
+        .experiment-thumbnail {
+          img {
+            width: 100%;
+            height: 100%;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+          }
+        }
+
+        .col:first-child {
+          margin-left: 0;
+        }
+
+        .col {
+          display: block;
+          float: left;
+          margin-left: 2%;
+        }
+
+        .desc {
+          box-sizing: border-box;
+          width: 40.5%;
+        }
+
+        .mockup {
+          width: 57.5%;
+
+          img {
+            float: right;
+          }
+        }
+
+        .experiment-description {
+          padding: 30px;
+          width: 500px;
+
+          .title {
+            height: 50px;
+          }
+
+          .used-skills {
+            li {
+              @include span(2 of 4);
+              width: 50%;
+              margin: 20px 0 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

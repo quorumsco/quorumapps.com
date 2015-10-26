@@ -1,0 +1,65 @@
+@include exports('footer') {
+  #footer {
+    padding: 2em;
+    color: #fff;
+    background-color: #312f38;;
+    position: relative;
+    text-align: center;
+
+    .container {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+    }
+
+    a {
+      color: darken(#fff, 40%);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        line-height: 25px;
+        margin: 0 10px;
+      }
+    }
+
+    .copyright {
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      margin-bottom: 10px;
+
+      i {
+        position: relative;
+        top: -2px;
+        font-size: 1.5em;
+      }
+    }
+
+    @include susy-media($medium-screen) {
+      .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+      }
+
+      .social-links {
+        margin-left: 20px;
+      }
+
+      .pages {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

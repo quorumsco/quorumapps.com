@@ -17,19 +17,28 @@
     throttle("scroll", "optimizedScroll");
 })();
 
-// handle event
-var navbar = document.getElementById('nav');
-window.addEventListener("optimizedScroll", function() {
-  var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-  if (scrollTop > 0) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+
+// Toogle Menu
+$('.nav-toggle a').first().on('click', function(e) {
+  e.preventDefault();
+  $('#nav').toggleClass('show-menu');
 });
 
-// Footer particles animation
-particlesJS('footer', {
+var slide = $('#slide');
+
+$(slide).typed({
+  stringsElement: $('#typed-strings'),
+  typeSpeed: 10,
+  backDelay: 800,
+  backSpeed: -10,
+  contentType: 'html',
+  loop: true,
+  showCursor: true,
+  cursorChar: " |"
+});
+
+// Contact particles animation
+particlesJS('contact', {
   "particles": {
     "number": {
       "value": 150,
@@ -39,7 +48,7 @@ particlesJS('footer', {
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#999"
     },
     "shape": {
       "type": "circle",
@@ -57,7 +66,7 @@ particlesJS('footer', {
       }
     },
     "opacity": {
-      "value": 0.3,
+      "value": 0.6,
       "random": false,
       "anim": {
         "enable": false,
@@ -79,7 +88,7 @@ particlesJS('footer', {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#ffffff",
+      "color": "#BDBDBD",
       "opacity": 0.2,
       "width": 1
     },
@@ -146,41 +155,6 @@ particlesJS('footer', {
   }
 });
 
-
-// Operational tools paralaxe scrolling and animation
-var controller = new ScrollMagic.Controller();
-new ScrollMagic.Scene({triggerHook: "onEnter", triggerElement: "#tools", duration: "200%"})
-  .setTween("#tools > .background", {y: "80%", ease: Linear.easeNone})
-  .addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#home", duration: "100%"})
-	.setClassToggle("nav .main-links li:nth-child(1) a", "active") // add class toggle
-	.addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#who-are-we", duration: $('#who-are-we').outerHeight() + $('#activities').outerHeight() + $('#we-follow').outerHeight() + $('#tools').outerHeight()})
-	.setClassToggle("nav .main-links li:nth-child(2) a", "active") // add class toggle
-	.addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#lab", duration: $('#lab').outerHeight()})
-	.setClassToggle("nav .main-links li:nth-child(3) a", "active") // add class toggle
-	.addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#team", duration: $('#team').outerHeight()})
-	.setClassToggle("nav .main-links li:nth-child(4) a", "active") // add class toggle
-	.addTo(controller);
-new ScrollMagic.Scene({triggerElement: "#tools"})
-	.setClassToggle("#tools", "visible") // add class toggle
-	.addTo(controller);
-
-var slide = $('#slide');
-
-$(slide).typed({
-  stringsElement: $('#typed-strings'),
-  typeSpeed: 10,
-  backDelay: 800,
-  backSpeed: -10,
-  contentType: 'html',
-  loop: true,
-  showCursor: true,
-  cursorChar: " |"
-});
-
 // var height = $(slide).height();
 
 // var translateY = function(value) {
@@ -211,8 +185,3 @@ $(slide).typed({
 //         next();
 //     });
 // });
-
-$('.nav-toggle a').first().on('click', function(e) {
-  e.preventDefault();
-  $('#nav').toggleClass('show-menu');
-});

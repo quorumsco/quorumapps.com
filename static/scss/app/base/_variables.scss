@@ -1,11 +1,13 @@
 // Typography
-$base-font-family: $helvetica !default;
-$heading-font-family: $base-font-family;
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Raleway', sans-serif;
+$font-quote: 'Lora', serif;
 
 // Font Sizes
 $base-font-size: 15px;
 
 // Line height
+$nav-height: 2;
 $base-line-height: 1.5 * $base-font-size;
 $heading-line-height: 1.2;
 
@@ -22,8 +24,14 @@ $base-z-index: 0;
 // Colors
 $blue: #477dca;
 $dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+$medium-gray: #BDBDBD;
+$light-gray: #fbfbfb;
+$cta-color: #FF6600;
+$cta-color-hover: #fd9c8c;
+$cta-color-border: #ff725b;
+
+// Nav
+$nav-background-color: #fff;
 
 // Font Colors
 $base-background-color: #fff;

@@ -1,0 +1,55 @@
+@include exports('newsletter') {
+  #newsletter {
+    background-color: $light-gray;
+    text-align: center;
+
+    .signup {
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    #mc_embed_signup {
+      margin-top: 30px;
+    }
+
+    input[type="email"] {
+      border-color: #E4E4E4;
+    }
+
+    input[type="submit"] {
+      top: -13px;
+      position: relative;
+      width: 100%;
+      border-radius: 0 0 3px 3px;
+    }
+  }
+
+  @include susy-media($medium-screen) {
+    #newsletter {
+      .signup {
+        font-size: 1.4em;
+      }
+
+      .mc-field-group {
+        display: inline-block;
+        width: 40%;
+      }
+
+      #mce-responses {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      input[type="email"] {
+        border-color: transparent;
+      }
+
+      input[type="submit"] {
+        top: 0;
+        position: relative;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@include exports('skills') {
+  #skills {
+    padding: 0em 2em 4em 2em;
+    margin-top: 8%;
+
+    .content {
+      position: relative;
+      width: 100%;
+    }
+
+    .skill {
+      display: inline-block;
+      position: relative;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 100%;
+
+
+      .skill-description {
+        h2 {
+          padding: 15px 15px;
+          margin-bottom: 0;
+          text-transform: uppercase;
+          color: #fff;
+        }
+
+        img {
+          position: absolute;
+          width: 20px;
+          top: 15px;
+          right: 15px;
+        }
+      }
+
+      .details {
+        li {
+          line-height: 40px;
+          @include adjust-font-size-to(ms(0.7), 1.3);
+          border-bottom: 1px solid $light-gray;
+          padding: 5px 0;
+        }
+
+        li:first-child {
+          margin-top: 10px;
+        }
+
+        li:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .skill-1 { background-color: #feb163; }
+    .skill-2 { background-color: #fc5c5e; }
+    .skill-3 { background-color: #2f95d0; }
+    .skill-4 { background-color: #bf578c; }
+
+
+    @include susy-media($medium-screen) {
+      .skill {
+        position: relative;
+        margin-top: 0;
+        @include span(1 of 4);
+        width: 24%;
+        margin: 0 0.5%;
+
+        .skill-description {
+          h2 {
+            font-size: 0.9em;
+          }
+        }
+
+        .details {
+          li {
+            @include adjust-font-size-to(ms(1), 1.5);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@include exports('contact') {
+  #contact {
+    position: relative;
+
+    canvas {
+      display: none;
+      @include position(absolute, 0 0 0 0);
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .reachus {
+      margin-top: 50px;
+      box-sizing: border-box;
+      @include adjust-font-size-to(ms(1), 1);
+
+      h3 {
+        text-transform: uppercase;
+      }
+
+      span { display: block; }
+
+      .cities {
+        padding: 30px 0;
+
+        .city {
+          margin-bottom: 10px;
+        }
+      }
+
+      .social-links {
+        display: block;
+        li {
+          display: inline-block;
+          @include adjust-font-size-to(ms(2.5), 1);
+          margin: 5px 5px;
+
+          a {
+            color: $dark-gray;
+          }
+
+          &:hover {
+            a {
+              color: $medium-gray;
+            }
+          }
+        }
+
+        li:first-child {
+          margin: 0 5px 0 0;
+        }
+      }
+
+    }
+
+    @include susy-media($medium-screen) {
+      canvas {
+        display: block;
+      }
+      .form {
+        box-sizing: border-box;
+        padding-right: 20px;
+        @include span(2 of 4);
+        margin: 0;
+        border-right: 1px solid $light-gray;
+
+        input,
+        textarea {
+          border: 1px solid lighten(gray, 25%);
+        }
+      }
+
+      .reachus {
+        position: relative;
+        @include span(2 of 4);
+        margin: 0;
+        padding: 0 20px;
+
+        span {
+          display: inline-block;
+        }
+
+        .contact {
+          position: relative;
+          .phone, .mail {
+            font-size: 0.9em;
+            display: inline-block;
+            width: 50%;
+          }
+        }
+
+        .cities {
+          position: relative;
+
+          .city {
+            box-sizing: border-box;
+            margin-bottom: 0;
+            display: inline-block;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

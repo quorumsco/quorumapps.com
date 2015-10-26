@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Team - Quorum
+    meta(name='description' content='Quorum')
+    meta(name='keywords' content='quorum')
+    meta(name='author' content='Douézan-Grard Guillaume - Quorum')
+    link(rel="icon", type="image/png", href="images/icons/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="images/icons/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="images/icons/favicon-16x16.png", sizes="16x16")
+    link(rel='stylesheet' href='stylesheets/app.css')
+  body.fr
+    include includes/nav.jade
+    header#page
+      .container
+        ul
+          li(lang="fr") La Data Agency
+          li(lang="en") The Data Agency
+          hr
+        .quote
+          p(lang="fr") Nous croyons en la connexion des intelligences, des savoirs et des experiences.
+          p(lang="en") We believe in collective intelligence. we are assembling a team of passionate, creative people that strive to apply cutting edge research to real-world problems.
+    main
+      section#team
+        .container
+          .content
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span(lang="fr").job-title Data Analysts & Data Scientists
+                span(lang="en").job-title Data Analysts & Data Scientists
+                p(lang="fr").job-details Collecter les données, les nettoyer, en tirer l’intelligence.
+                p(lang="en").job-details
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span(lang="fr").job-title Sciences Sociales/Cognitives
+                span(lang="en").job-title Campaigners
+                p(lang="fr").job-details Recherche en Sciences sociales, politiques et sciences cognitive, étude de terrain.
+                p(lang="en").job-details
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span(lang="fr").job-title Developpeurs
+                span(lang="en").job-title Developpers
+                p(lang="fr").job-details Rendre disponible nos recherches dans des interfaces intuitives, accessibles et prêtes à l’action concrete.
+                p(lang="en").job-details
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span(lang="fr").job-title Communication
+                span(lang="en").job-title Communication Officer
+                p(lang="fr").job-details Communiquer sur ce que la technologie est aujourd’hui capable de faire pour améliorer la société.
+                p(lang="en").job-details
+            .team-member
+              .icon-job
+                img(src='images/team/user.png')
+              .job-description
+                span(lang="fr").job-title Juridique
+                span(lang="en").job-title Legal expert
+                p(lang="fr").job-details Protéger  les données personnelles et données sensibles. Un correspondant informatique et libertés répond à vos questions (cil@quorumimpact.com)
+                p(lang="en").job-details
+        .container(lang="en")
+          .content
+      section#cta.page
+        .container
+          .content
+            a.cta(href='//blog.quorumapps.com')
+              span(lang="fr") Notre blog
+              span(lang="en") Our blog
+    include includes/footer.jade
+    include includes/js.jade
