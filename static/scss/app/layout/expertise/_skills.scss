@@ -1,6 +1,7 @@
 @include exports('skills') {
   #skills {
-    padding: 4em 2em;
+    padding: 0em 2em 4em 2em;
+    margin-top: 8%;
 
     .content {
       position: relative;
@@ -8,7 +9,6 @@
     }
 
     .skill {
-      margin-top: 30px;
       display: inline-block;
       position: relative;
       box-sizing: border-box;

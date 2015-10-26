@@ -17,9 +17,8 @@
       content: "";
       background-image: url('../images/header/quorum-header.jpg');
       background-position: top center;
-      background-size: 700px 350px;
+      background-size: 800px auto;
       background-repeat: no-repeat;
-      opacity: 0.9;
       top: 0;
       left: 0;
       bottom: 0;
@@ -29,7 +28,8 @@
     }
 
     .container {
-      padding-top: 350px;
+      padding-top: 400px;
+      width: 100%;
     }
 
     hr {
@@ -42,20 +42,39 @@
     }
   }
 
+  #page_anim,
   #page {
     position: relative;
-    height: 400px;
     padding: 1em;
     padding-top: ($nav-height + 0.5) * $base-line-height;
     box-sizing: border-box;
+
+    span#slide {
+      text-align: center;
+      color: #6F6F6F;
+      em {
+        color: #6F6F6F;
+        text-shadow: none;
+        font-style: normal;
+      }
+    }
+
+    ul {
+      li.subtitle {
+        em {
+          color: #6F6F6F;
+          text-shadow: none;   
+          font-style: normal;
+        }
+      }
+    }
 
     &:after {
       content: "";
       background-image: url('../images/header/quorum-header.jpg');
       background-position: top center;
-      background-size: auto 400px;
+      background-size: 700px auto;
       background-repeat: no-repeat;
-      opacity: 0.9;
       top: -206px;
       left: 0;
       bottom: 0;
@@ -79,7 +98,15 @@
     }
   }
 
-  #home, #page {
+  #page_anim {
+    height: 500px;
+  }
+
+  #page {
+    height: 400px;
+  }
+
+  #home, #page, #page_anim {
     .container {
       overflow: hidden;
     }
@@ -96,13 +123,6 @@
       text-align: center;
       font-weight: 800;
       text-transform: uppercase;
-
-      em {
-        //color: #4A4A4A;
-        color: #fff;
-        font-style: normal;
-        text-shadow: 0px 2px 4px rgba(150, 150, 150, 0.9);
-      }
     }
 
     li {
@@ -142,12 +162,6 @@
     }
   }
 
-  #slide {
-    /*@include single-transition(transform, .3s);
-    transform: translateY(100%);
-    visibility: hidden;*/
-  }
-
   .typed-cursor {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -175,14 +189,23 @@
       height: 100vh;
 
       .container {
-        padding-top: 25%;
+        padding-top: 35%;
       }
 
-      li { @include adjust-font-size-to(ms(10), 3); }
+      li { @include adjust-font-size-to(ms(7), 3); }
     }
 
-    #page {
-      height: 450px;
+    #page_anim {
+      height: 600px;
+
+      .anim {
+        position: absolute;
+        left: 0;
+        padding-top: 5%;
+        height: 30%;
+        background-color: #fbfbfb;
+        width: 100%;
+      }
 
       .container {
         padding-top: 145px;
@@ -191,7 +214,17 @@
       li { @include adjust-font-size-to(ms(7), 3); }
     }
 
-    #home, #page {
+    #page {
+      height: 400px;
+
+      .container {
+        padding-top: 145px;
+      }
+
+      li { @include adjust-font-size-to(ms(7), 3); }
+    }
+
+    #home, #page, #page_anim {
       padding-top: ($nav-height + 1.5) * $base-line-height;
 
       .container {
@@ -229,7 +262,7 @@
           font-family: $font-quote;
           color: #6F6F6F;
           text-align: center;
-          @include adjust-font-size-to(ms(5), 3);
+/*          @include adjust-font-size-to(ms(5), 3);*/
           line-height: 1.2em;
           position: relative;
         }

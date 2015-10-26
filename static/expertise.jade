@@ -15,12 +15,23 @@ html
     link(rel='stylesheet' href='stylesheets/app.css')
   body.fr
     include includes/nav.jade
-    header#page
+    header#page_anim
       .container
         ul
           li(lang="fr") Because Smart Data is stronger than Big Data
           li(lang="en") Because Smart Data is stronger than Big Data
           hr
+        .anim
+          ul
+            span#slide
+          div(id="typed-strings")
+            p <em>Piloter</em> sa campagne
+            p <em>Optimiser</em> les politiques publiques
+            p <em>Amplifier</em> son action
+            p <em>Dynamiser</em> son mouvement
+            p <em>Gagner</em> du terrain
+          ul
+            li.subtitle avec #[em QUORUM].
     main
       section#skills
         .container(lang="fr")
@@ -34,9 +45,9 @@ html
                 h2 Data & Analytics
                 img(src='images/icons/data.png' alt='Icon Data')
               ul.details
-                li Intelligence contextuelle
-                li Cartographie et constitution d’un patrimoine numérique
-                li Acquisition de données
+                li Intelligence contextuelle, dynamique d'un territoire
+                li Cartographie décisionnelle
+                li Acquisition de données online et sur le terrain
                 li Remonter d’informations online et offline
             li.skill
               .skill-description.skill-2
@@ -44,22 +55,22 @@ html
                 img(src='images/icons/predictive.png' alt='Icon Prédictive')
               ul.details
                 li Quants et Algorithmes
-                li Où agir ? Où concentrer mes forces ?
+                li Priorisation :Où agir ? Où concentrer ses forces ?
             li.skill
               .skill-description.skill-3
                 h2 Communication
                 img(src='images/icons/communication.png' alt='Icon Communication')
               ul.details
                 li Gestion de la proximité et gestion de contacts
-                li Rencontrer les individus là où ils se trouvent
-                li Délivrer le message au bon moment
+                li Rencontrer les individus là où ils se trouvent : sur le terrain, par e-mail, sms, téléphone ou sur les réseaux sociaux
+                li Délivrer le bon message au bon moment, communiquer de façon individualisée et impactante.
             li.skill
               .skill-description.skill-4
                 h2 Pilotage
                 img(src='images/icons/digital.png' alt='Icon Digital')
               ul.details
-                li Applications web et mobiles intuitives
-                li Live Tracking et mesure d’impact de son action
+                li Applications web et mobiles intuitives rapides à la prise en main
+                li Conserver  et mesure d’impact de son action
         .container(lang="en")
           header
             h3
@@ -118,18 +129,18 @@ html
                 li
                   span.number 1
                   p Utiliser l’opportunité donnée par l’Open Data et  le Big Data.
-                  p Prendre la mesure de de la quantité de données qu’un mouvement, une ONG , qu’une campagne ou une administration produit dans son action quotidienne e et sur le terrain.
+                  p Prendre la mesure de de la quantité de données qu’un mouvement, une ONG , qu’une campagne ou une administration produit dans son action quotidienne.
                 li
                   span.number 2
-                  p Comprendre qu’aujourd’hui cette donnée peut être utilisée et utile pour l'action.
-                  p La Donnée en elle même est un enregistrement d’une information. Mais ces informations il faut les analyser, les croiser pour en tirer de l’intelligence.
+                  p Comprendre qu’aujourd’hui cette donnée peut être utilisée.
+                  p La Donnée en elle même est l' enregistrement d’une information. Ces informations, en quantité, il faut les analyser, les croiser pour en tirer de l’intelligence.
                 li
                   span.number 3
-                  p Parce que ces données intelligentes peuvent aider à comprendre quels phénomènes se produisent et ainsi améliorer l’impact de son action et régler des problèmes sociaux.
+                  p Parce que ces données intelligentes peuvent aider à comprendre quels phénomènes se produisent et ainsi améliorer l’impact de son action aujourd'hui et régler les problèmes sociétaux de demain.
         .container(lang="en")
           header
             h3
-              span The way we do it
+              span How we do it
               hr
           .content
             .mockup

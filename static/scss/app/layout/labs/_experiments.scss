@@ -2,15 +2,28 @@
   #experiments {
     padding: 4em 2em;
 
+    .experiment:nth-child(1) {
+      background: url('../images/labs/elections.jpg') no-repeat center;
+    }
+    .experiment:nth-child(2) {
+      background: url('../images/labs/twitter.jpg') no-repeat center;
+    }
+    .experiment:nth-child(3) {
+      background: url('../images/labs/civisen.jpg') no-repeat center;
+    }
+
     .experiment {
-      height: 100%;
-      margin-bottom: 30px;
+      .mockup {
+        display: none;
+      }
 
       .experiment-description {
+        display: block;
         position: relative;
         padding: 80px 20px 20px 20px;
         box-sizing: border-box;
-        background-color: #fbfbfb;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 40%;
         color: #6F6F6F;
 
         .title {
@@ -18,13 +31,12 @@
           font-size: 1.1em;
           text-transform: uppercase;
           position: absolute;
-          background-color: #2f95d0;
-          color: #fff;
+          color: #000;
           width: 100%;
           box-sizing: border-box;
           top: 0;
           left: 0;
-          padding: 15px 20px;
+          padding: 15px 30px;
         }
 
         .project {
@@ -74,11 +86,15 @@
         height: 220px;
 
         img {
-          opacity: 0.6;
+          opacity: 0;
           background-color: #fff;
           @include transition(all, .5s, cubic-bezier(0.7, 0, 0.3, 1));
         }
       }
+    }
+
+    @include susy-media($xlarge-screen) {
+
     }
 
     @include susy-media($medium-screen) {
@@ -87,7 +103,7 @@
           float: right;
         }
 
-        .experiment-description {
+/*        .experiment-description {
           &:after {
             position: absolute;
             z-index: 10;
@@ -98,12 +114,12 @@
             top: 0;
             border-top: 25px solid transparent;
             border-bottom: 25px solid transparent;
-            border-left: 25px solid #2f95d0;
+            border-left: 25px solid darken(lightgrey, 10%);
           }
-        }
+        }*/
       }
 
-      .experiment:nth-of-type(odd) {
+/*      .experiment:nth-of-type(odd) {
         .experiment-description {
           &:after {
             position: absolute;
@@ -115,31 +131,37 @@
             top: 0;
             border-top: 25px solid transparent;
             border-bottom: 25px solid transparent;
-            border-right: 25px solid #2f95d0;
+            border-right: 25px solid darken(lightgrey, 10%);
           }
         }
       }
-
+*/
       .experiment {
-        margin-bottom: 0;
-
-        &:hover {
-          .experiment-thumbnail {
-            img {
-              height: 100%;
-              opacity: 0.9;
-              -webkit-transform: scale3d(1.2, 1.2, 1);
-              transform: scale3d(1.2, 1.2, 1);
-            }
-          }
-        }
+        position: relative;
+        margin: 30px auto 80px;
+        width: 100%;
+        max-width: 1000px;
 
         .experiment-thumbnail, .experiment-description {
           position: relative;
           @include span(2 of 4);
           width: 50%;
           margin: 0;
-          height: 333px;
+          height: 50%;
+        }
+
+        .content {
+          height: 390px;
+          padding-top: 100px;
+        }
+
+        .narrow-content {
+          max-width: 960px;
+          margin: 0 auto;
+        }
+
+        .row {
+          margin-bottom: 0!important;
         }
 
         .experiment-thumbnail {
@@ -151,8 +173,32 @@
           }
         }
 
+        .col:first-child {
+          margin-left: 0;
+        }
+
+        .col {
+          display: block;
+          float: left;
+          margin-left: 2%;
+        }
+
+        .desc {
+          box-sizing: border-box;
+          width: 40.5%;
+        }
+
+        .mockup {
+          width: 57.5%;
+
+          img {
+            float: right;
+          }
+        }
+
         .experiment-description {
-          padding-top: 60px;
+          padding: 30px;
+          width: 500px;
 
           .title {
             height: 50px;

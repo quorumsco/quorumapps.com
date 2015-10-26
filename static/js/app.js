@@ -24,6 +24,18 @@ $('.nav-toggle a').first().on('click', function(e) {
   $('#nav').toggleClass('show-menu');
 });
 
+var slide = $('#slide');
+
+$(slide).typed({
+  stringsElement: $('#typed-strings'),
+  typeSpeed: 10,
+  backDelay: 800,
+  backSpeed: -10,
+  contentType: 'html',
+  loop: true,
+  showCursor: true,
+  cursorChar: " |"
+});
 
 // Contact particles animation
 particlesJS('contact', {
@@ -54,7 +66,7 @@ particlesJS('contact', {
       }
     },
     "opacity": {
-      "value": 0.3,
+      "value": 0.6,
       "random": false,
       "anim": {
         "enable": false,
@@ -141,20 +153,6 @@ particlesJS('contact', {
     "background_repeat": "no-repeat",
     "background_size": "cover"
   }
-});
-
-
-var slide = $('#slide');
-
-$(slide).typed({
-  stringsElement: $('#typed-strings'),
-  typeSpeed: 10,
-  backDelay: 800,
-  backSpeed: -10,
-  contentType: 'html',
-  loop: true,
-  showCursor: true,
-  cursorChar: " |"
 });
 
 // var height = $(slide).height();

@@ -10,6 +10,9 @@
         margin-bottom: 1.5em;
       }
     }
+    .mockup {
+      text-align: center;
+    }
 
     @include susy-media($medium-screen) {
       .content {
