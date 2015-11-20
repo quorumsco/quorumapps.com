@@ -6,10 +6,46 @@
       background: url('../images/labs/elections.jpg') no-repeat center;
     }
     .experiment:nth-child(2) {
-      background: url('../images/labs/twitter.jpg') no-repeat center;
+      background: url('../images/labs/panneau.jpg') no-repeat center;
     }
     .experiment:nth-child(3) {
+      background: url('../images/labs/twitter.jpg') no-repeat center;
+    }
+    .experiment:nth-child(4) {
       background: url('../images/labs/civisen.jpg') no-repeat center;
+    }
+
+    .cta {
+      display: block;
+      text-align: center;
+      position: relative;
+      box-sizing: border-box;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      font-size: 0.6em;
+      background-color: grey;
+      margin: auto;
+
+      max-width: 300px;
+      padding: 0 20px;
+      overflow: hidden;
+      border: 1px solid lightgrey;
+      border-radius: 3px;
+
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: lightgrey;
+        border-color: grey;
+      }
+
+      span {
+        text-transform: uppercase;
+        font-size: 1.4em;
+      }
     }
 
     .experiment {
